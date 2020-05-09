@@ -1,0 +1,29 @@
+.header-wrapper {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 56px;
+  &__logo {
+    display: flex;
+    margin-right: auto;
+    margin-left: 20px;
+    height: 100%;
+  }
+  &__nav-links {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 20px;
+      cursor: pointer;
+      a {
+        transition: all 0.3s ease 0s;
+      }
+      &:hover {
+        a {
+          color: red;
+        }
+      }
+    }
+  }
+}

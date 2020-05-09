@@ -1,0 +1,13 @@
+.progress-wrapper {
+  width: 15%;
+  height: 3px;
+  margin: 15px auto;
+  background: rgba($color: #fff, $alpha: 0.8);
+  border-radius: 50px;
+  text-align: center;
+  &__scale {
+    height: 100%;
+    transition: all 0.2s ease;
+    background: rgba($color: #000, $alpha: 0.6);
+  }
+}

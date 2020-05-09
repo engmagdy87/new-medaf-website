@@ -1,0 +1,24 @@
+.splash-screen-wrapper {
+  padding-top: 100px;
+  height: calc(100% - 100px);
+  width: 100%;
+  text-align: center;
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 2%;
+  }
+  img:nth-child(1) {
+    width: 100px;
+  }
+  img:nth-child(2) {
+    width: 25%;
+    height: 40%;
+    object-fit: cover;
+  }
+  p {
+    padding-top: 6%;
+    font-size: 1.8rem;
+    letter-spacing: 18px;
+  }
+}

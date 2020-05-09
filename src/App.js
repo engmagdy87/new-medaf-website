@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState, useEffect, Suspense } from 'react';
+import './assets/styles/app.scss';
+const SplashScreen = React.lazy(() => import('./views/components/Loading/SplashScreen'));
+const Header = React.lazy(() => import('./views/components/Header'));
 
 function App() {
+  const step = 25;
+  const [isLoading, setIsLoading] = useState(true)
+  const [spinnerValue, setSpinnerValue] = useState(0)
+
+  useEffect(() => {
+    let interval;
+
+    if (spinnerValue !== 100)
+      interval = setInterval(() => {
+        setSpinnerValue(spinnerValue + step);
+        clearInterval(interval);
+      }, step * 100);
+
+    if (spinnerValue === 100)
+      setIsLoading(false)
+
+  }, [spinnerValue])
+
+  const renderContent = () => {
+    if (isLoading) return (<SplashScreen value={spinnerValue} />)
+    else return (
+      <Fragment>
+        <Header />
+      </Fragment>
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <Suspense fallback={<span></span>}>
+        {renderContent()}
+      </Suspense>
     </div>
   );
 }

@@ -1,0 +1,141 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.header-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: $header-height;
+  z-index: 10;
+  @include is-mobile {
+    height: $header-height-mobile;
+  }
+  &__logo {
+    margin-right: auto;
+    margin-left: 40px;
+    width: 300px;
+    @include is-mobile {
+      width: 150px;
+    }
+    img {
+      display: inline-block;
+      width: 150px;
+      margin-right: 20px;
+      @include is-mobile {
+        width: 70px;
+      }
+    }
+    p {
+      display: inline-block;
+      font-size: 2rem;
+      @include is-mobile {
+        font-size: 1rem;
+      }
+    }
+  }
+  &__navLinks {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 20px 10px;
+      cursor: pointer;
+      a {
+        transition: all 0.3s ease 0s;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      &:hover {
+        a {
+          color: red;
+        }
+      }
+    }
+    &--active a {
+      color: red !important;
+    }
+  }
+}
+
+.hamburger-menu {
+  font-size: 30px;
+  cursor: pointer;
+  color: white !important;
+  position: absolute;
+  top: calc(#{$header-height} / 2.5);
+  right: 24px;
+  @include is-mobile {
+    top: calc(#{$header-height-mobile} / 3.5);
+  }
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: calc(100% - 50px);
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 50px;
+  &__text {
+    &--active {
+      color: brown !important;
+    }
+    @include is-mobile {
+      font-size: 1.6rem !important;
+    }
+  }
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: red;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

@@ -1,3 +1,5 @@
+@import '../mixins.scss';
+
 .progress-wrapper {
   width: 15%;
   height: 3px;
@@ -5,6 +7,9 @@
   background: rgba($color: #fff, $alpha: 0.8);
   border-radius: 50px;
   text-align: center;
+  @include is-mobile {
+    width: 70%;
+  }
   &__scale {
     height: 100%;
     transition: all 0.2s ease;

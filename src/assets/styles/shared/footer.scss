@@ -1,0 +1,16 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.footer-wrapper {
+  width: 100%;
+  height: $footer-height;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include is-mobile {
+    height: $footer-height-mobile;
+  }
+}

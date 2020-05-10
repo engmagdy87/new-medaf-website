@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.home-slide-wrapper {
+  height: calc(100vh - #{$header-height} - #{$footer-height});
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include is-mobile {
+    height: calc(100vh - #{$header-height-mobile} - #{$footer-height-mobile});
+  }
+  h1 {
+    padding-top: 10%;
+    padding-left: 10%;
+    width: 60%;
+    line-height: 70px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: justify;
+    font-weight: lighter;
+    @include is-mobile {
+      line-height: 35px;
+      font-size: 1.4rem;
+      width: 80%;
+    }
+  }
+  div {
+    padding-left: 10%;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    a {
+      color: white;
+    }
+  }
+}

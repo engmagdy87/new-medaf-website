@@ -1,0 +1,12 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.home-wrapper {
+  padding-top: $header-height;
+  height: calc(100% - #{$header-height});
+  position: relative;
+  @include is-mobile {
+    padding-top: $header-height-mobile;
+    height: calc(100% - #{$header-height-mobile});
+  }
+}

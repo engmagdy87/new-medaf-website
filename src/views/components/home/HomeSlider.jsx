@@ -10,7 +10,7 @@ export default function HomeSlider() {
   const [isCarouselRendered, setIsCarouselRendered] = useState(false);
   const thumbnails = new Array(HomeData.length).fill(
     <div
-      style={{ width: '40px', height: '2px', backgroundColor: 'white' }}
+      style={{ width: '30px', height: '2px', backgroundColor: 'white' }}
     ></div>
   );
   const slides = HomeData.map((slide) => (
@@ -29,9 +29,9 @@ export default function HomeSlider() {
         <Carousel
           value={activeSlideId}
           onChange={setActiveSlideId}
-          infinite
-          autoPlay={4000}
-          animationSpeed={1000}
+          // infinite
+          // autoPlay={4000}
+          // animationSpeed={1000}
           arrows={false}
           clickToChange
           centered

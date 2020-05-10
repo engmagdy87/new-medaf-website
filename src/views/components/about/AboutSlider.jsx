@@ -9,7 +9,7 @@ export default function AboutSlider() {
   const [activeSlideId, setActiveSlideId] = useState(0);
   const thumbnails = new Array(AboutData.length).fill(
     <div
-      style={{ width: '40px', height: '2px', backgroundColor: 'white' }}
+      style={{ width: '30px', height: '2px', backgroundColor: 'white' }}
     ></div>
   );
 

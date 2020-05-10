@@ -1,8 +1,8 @@
 @import '../mixins.scss';
 
 .splash-screen-wrapper {
-  padding-top: 100px;
-  height: calc(100% - 100px);
+  padding-top: 5vh;
+  height: calc(100% - 5vh);
   width: 100%;
   text-align: center;
   @include is-mobile {
@@ -17,16 +17,16 @@
     width: 100px;
   }
   img:nth-child(2) {
-    width: 400px;
-    height: 400px;
+    width: 30vw;
+    height: 45vh;
     object-fit: cover;
     @include is-mobile {
       width: 90%;
-      height: 300px;
+      height: 45vh;
     }
   }
   p {
-    padding-top: 6%;
+    padding-top: 4%;
     font-size: 1.8rem;
     letter-spacing: 18px;
     @include is-mobile {

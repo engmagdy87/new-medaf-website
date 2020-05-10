@@ -11,6 +11,18 @@
   align-items: center;
   height: $header-height;
   z-index: 10;
+  &--desktop {
+    display: none;
+    @include is-large-desktop {
+      display: block;
+    }
+  }
+  &--mobile {
+    display: block;
+    @include is-large-desktop {
+      display: none;
+    }
+  }
   @include is-mobile {
     height: $header-height-mobile;
   }
@@ -60,7 +72,9 @@
     }
   }
 }
-
+.hi-active {
+  color: red !important;
+}
 .hamburger-menu {
   font-size: 30px;
   cursor: pointer;

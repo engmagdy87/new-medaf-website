@@ -20,7 +20,7 @@ export default function HomeSlider() {
   useEffect(() => {
     setTimeout(() => {
       setIsCarouselRendered(true);
-    }, 1);
+    }, 10);
   }, []);
 
   const renderCarousel = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../assets/images/logo.png';
+import logoIcon from '../../assets/images/medaf-icon.png';
+import logoTypeface from '../../assets/images/medaf-typeface.png';
 import '../../assets/styles/shared/header.scss';
 
 export default function Header({ activeItem }) {
@@ -97,8 +98,8 @@ export default function Header({ activeItem }) {
   return (
     <header className="header-wrapper">
       <div className="header-wrapper__logo">
-        <img src={logo} alt="medaf" />
-        <p>MEDAF</p>
+        <img src={logoIcon} alt="medaf icon" />
+        <img src={logoTypeface} alt="medaf typeface" />
       </div>
       {renderDesktopHeader()}
       {renderMobileHeader()}

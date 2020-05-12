@@ -1,11 +1,15 @@
 import React from 'react';
+import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 import Arrow from '../../../assets/images/about/arrow.png';
 import '../../../assets/styles/components/about/slide.scss';
 
 export default function AboutSlide({ content, goToNextSlide }) {
+  const imageSrc = isDeviceSmart()
+    ? content.image.mobile
+    : content.image.desktop;
   return (
     <div className="about-slide-wrapper">
-      <img src={content.image} alt={content.title} />
+      <img src={imageSrc} alt={content.title} />
       <img src={Arrow} alt="arrow" onClick={goToNextSlide} />
       <div>
         <h1>{content.title}</h1>

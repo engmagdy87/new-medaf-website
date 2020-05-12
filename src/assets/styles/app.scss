@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './color-palette.scss';
 
 html {
   -webkit-overflow-scrolling: touch;
@@ -44,6 +45,6 @@ a {
 
 .BrainhubCarousel__thumbnail--selected {
   div {
-    background-color: brown !important;
+    background-color: $primary !important;
   }
 }

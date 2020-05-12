@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import AboutSlide from './AboutSlide';
 import AboutData from '../../../assets/data/about.js';
 import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/about/slider.scss';
+const AboutSlide = React.lazy(() => import('./AboutSlide'));
 
 export default function AboutSlider() {
   const [activeSlideId, setActiveSlideId] = useState(0);
@@ -24,9 +24,9 @@ export default function AboutSlider() {
         <Carousel
           value={activeSlideId}
           onChange={setActiveSlideId}
-          infinite
-          autoPlay={4000}
-          animationSpeed={1000}
+          // infinite
+          // autoPlay={4000}
+          // animationSpeed={1000}
           arrows={false}
           clickToChange
           centered

@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+@import '../../color-palette.scss';
 @import '../../mixins.scss';
 
 .about-slide-wrapper {
@@ -36,8 +37,9 @@
     @include is-mobile {
       position: absolute;
       top: 0;
-      width: 75%;
+      width: 92%;
       height: 100%;
+      background-color: rgba($color: #000, $alpha: 0.55);
     }
     h1 {
       font-size: 2.5rem;
@@ -56,14 +58,13 @@
       overflow-y: auto;
       @include is-mobile {
         margin-top: 20%;
-        padding-left: 5px;
-        padding-right: 5px;
+        width: 84%;
       }
       &::-webkit-scrollbar {
         width: 5px !important;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: rgba($color: #000, $alpha: 0.6) !important;
+        background-color: $primary !important;
         border-radius: 20px !important;
       }
       &::-webkit-scrollbar {
@@ -78,6 +79,7 @@
         font-size: 1.4rem;
         @include is-mobile {
           font-size: 1.2rem;
+          text-align: left;
         }
       }
       span {

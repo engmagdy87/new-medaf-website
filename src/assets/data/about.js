@@ -1,7 +1,11 @@
-const Image1 = require("../../assets/images/about/img1.jpg")
-const Image2 = require("../../assets/images/about/img2.jpg")
-const Image3 = require("../../assets/images/about/img3.jpg")
-const Image4 = require("../../assets/images/about/img4.jpg")
+const DesktopImage1 = require("../../assets/images/about/desktop/medaf-about-1.png")
+const DesktopImage2 = require("../../assets/images/about/desktop/medaf-about-2.png")
+const DesktopImage3 = require("../../assets/images/about/desktop/medaf-about-3.png")
+const DesktopImage4 = require("../../assets/images/about/desktop/medaf-about-4.png")
+const MobileImage1 = require("../../assets/images/about/mobile/medaf-about-1.png")
+const MobileImage2 = require("../../assets/images/about/mobile/medaf-about-2.png")
+const MobileImage3 = require("../../assets/images/about/mobile/medaf-about-3.png")
+const MobileImage4 = require("../../assets/images/about/mobile/medaf-about-4.png")
 
 export default [
     {
@@ -10,7 +14,10 @@ export default [
         "body": ["MEDAF Investments is a Kuwaiti-Egyptian business partnership, and one of the fastest growing global holding groups in the EMEA region. We provide a unique integrated service model combining non-banking financial ser- vices with business operations that span across multiple sectors and industries. With a primary focus on Egypt, Africa and the Middle East, MEDAF is expanding to offer its services to clients around the globe."],
         "actions": [
         ],
-        "image": Image1
+        "image": {
+            desktop: DesktopImage1,
+            mobile: MobileImage1
+        }
     },
     {
         "id": 1,
@@ -19,7 +26,10 @@ export default [
         "actions": [
 
         ],
-        "image": Image2
+        "image": {
+            desktop: DesktopImage2,
+            mobile: MobileImage2
+        }
     },
     {
         "id": 2,
@@ -27,7 +37,10 @@ export default [
         "body": ["Matrex Capital was founded and led by Mohab Zakaria as a partnership with MMID (Mansour and Maghrabi Invest- ment Development). The group of diverse businesses had been gaining momentum in the region’s contracting, trade & logistics, mining and electromechanical engineering sectors, with a focus on Africa.", "In 2018, Zakaria and Al-Faji joined forces, launching MEDAF Investments, creating a colorful investment port- folio that offers to lead, expand and transform its sur- rounding communities."],
         "actions": [
         ],
-        "image": Image3
+        "image": {
+            desktop: DesktopImage3,
+            mobile: MobileImage3
+        }
     },
     {
         "id": 3,
@@ -38,7 +51,10 @@ export default [
                 "text": "info@medafinvestment.com",
             }
         ],
-        "image": Image4
+        "image": {
+            desktop: DesktopImage4,
+            mobile: MobileImage4
+        }
     },
 
 ]

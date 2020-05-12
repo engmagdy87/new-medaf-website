@@ -1,48 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Progress from './Progress';
-import logo from '../../../assets/images/logo.png';
-import firstImage from '../../../assets/images/spinner/1.jpg';
-import secondImage from '../../../assets/images/spinner/2.jpg';
-import thirdImage from '../../../assets/images/spinner/3.jpg';
-import fourthImage from '../../../assets/images/spinner/4.jpg';
+import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import logo from '../../../assets/images/medaf-typeface.png';
 import '../../../assets/styles/components/splash-screen.scss';
+import SplashScreenData from '../../../assets/data/splachscreen';
+const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function SplashScreen({ value }) {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  useEffect(() => {
+    setCurrentSlideIndex((value / 100) * 4);
+  }, [value]);
   const renderImage = () => {
-    switch (value) {
-      case 0:
-        return firstImage;
-      case 25:
-        return secondImage;
-      case 50:
-        return thirdImage;
-      case 75:
-        return fourthImage;
-
-      default:
-        break;
-    }
+    const slideObject = SplashScreenData[currentSlideIndex];
+    let imageSrc = null;
+    if (isDeviceSmart()) imageSrc = slideObject.image.mobile;
+    else imageSrc = slideObject.image.desktop;
+    return <Img src={imageSrc} alt={slideObject.alt} />;
   };
   const renderText = () => {
-    switch (value) {
-      case 0:
-        return 'Sustaining Balance';
-      case 25:
-        return 'Optimizing Potential';
-      case 50:
-        return 'Transforming Mindsets';
-      case 75:
-        return 'Leading Trends';
-
-      default:
-        break;
-    }
+    return SplashScreenData[currentSlideIndex].text;
   };
 
   return (
     <div className="splash-screen-wrapper">
-      <img src={logo} alt="medaf" />
-      <img src={renderImage()} alt="spinner" />
+      <Img src={logo} alt={'medaf logo'} />
+      {renderImage()}
       <Progress value={value} />
       <p>{renderText()}</p>
     </div>

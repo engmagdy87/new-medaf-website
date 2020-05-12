@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import HomeSlide from './HomeSlide';
 import HomeData from '../../../assets/data/home.js';
 import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/home/slider.scss';
+const HomeSlide = React.lazy(() => import('./HomeSlide'));
 
 export default function HomeSlider() {
   const [activeSlideId, setActiveSlideId] = useState(0);
@@ -29,9 +29,9 @@ export default function HomeSlider() {
         <Carousel
           value={activeSlideId}
           onChange={setActiveSlideId}
-          // infinite
-          // autoPlay={4000}
-          // animationSpeed={1000}
+          infinite
+          autoPlay={4000}
+          animationSpeed={1000}
           arrows={false}
           clickToChange
           centered

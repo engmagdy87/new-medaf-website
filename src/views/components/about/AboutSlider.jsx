@@ -24,9 +24,9 @@ export default function AboutSlider() {
         <Carousel
           value={activeSlideId}
           onChange={setActiveSlideId}
-          // infinite
-          // autoPlay={4000}
-          // animationSpeed={1000}
+          infinite
+          autoPlay={4000}
+          animationSpeed={1000}
           arrows={false}
           clickToChange
           centered

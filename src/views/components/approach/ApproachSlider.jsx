@@ -1,7 +1,9 @@
 import React, { useState, Fragment } from 'react';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import ApproachData from '../../../assets/data/approach.js';
+import Arrow from '../../../assets/images/about/arrow.png';
 import '@brainhubeu/react-carousel/lib/style.css';
+import '../../../assets/styles/components/approach/slider.scss';
 const ApproachSlide = React.lazy(() => import('./ApproachSlide'));
 
 export default function ApproachSlider() {
@@ -20,13 +22,13 @@ export default function ApproachSlider() {
 
   const renderContent = () => {
     return (
-      <div>
+      <div className="approach-slider-wrapper">
         <Carousel
           value={activeSlideId}
           onChange={setActiveSlideId}
-          //   infinite
-          //   autoPlay={4000}
-          //   animationSpeed={1000}
+          infinite
+          autoPlay={4000}
+          animationSpeed={1000}
           arrows={false}
           clickToChange
           centered
@@ -36,7 +38,6 @@ export default function ApproachSlider() {
               key={slideNumber}
               slideNumber={slideNumber}
               innerSlides={ApproachData[slideNumber]}
-              //   goToNextSlide={goToNextSlide}
             />
           ))}
         </Carousel>
@@ -45,6 +46,18 @@ export default function ApproachSlider() {
           value={activeSlideId}
           onChange={setActiveSlideId}
           number={Object.keys(ApproachData).length}
+        />
+        <img
+          src={Arrow}
+          alt="arrow"
+          onClick={goToNextSlide}
+          className="approach-slide-wrapper__arrow"
+          style={{
+            display:
+              activeSlideId === Object.keys(ApproachData).length - 1
+                ? 'none'
+                : 'block',
+          }}
         />
       </div>
     );

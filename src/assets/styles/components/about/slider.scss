@@ -1,0 +1,18 @@
+@import '../../mixins.scss';
+
+.about-slider-wrapper {
+  position: relative;
+  &__arrow {
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    @include is-mobile {
+      display: none;
+    }
+    @include is-tablet {
+      display: none;
+    }
+  }
+}

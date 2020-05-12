@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import AboutData from '../../../assets/data/about.js';
-import '@brainhubeu/react-carousel/lib/style.css';
+import Arrow from '../../../assets/images/about/arrow.png';
 import '../../../assets/styles/components/about/slider.scss';
 const AboutSlide = React.lazy(() => import('./AboutSlide'));
 
@@ -32,11 +32,7 @@ export default function AboutSlider() {
           centered
         >
           {AboutData.map((slide) => (
-            <AboutSlide
-              key={slide.id}
-              content={slide}
-              goToNextSlide={goToNextSlide}
-            />
+            <AboutSlide key={slide.id} content={slide} />
           ))}
         </Carousel>
         <Dots
@@ -44,6 +40,12 @@ export default function AboutSlider() {
           value={activeSlideId}
           onChange={setActiveSlideId}
           number={AboutData.length}
+        />
+        <img
+          src={Arrow}
+          alt="arrow"
+          onClick={goToNextSlide}
+          className="about-slider-wrapper__arrow"
         />
       </div>
     );

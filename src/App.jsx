@@ -7,6 +7,7 @@ const SplashScreen = React.lazy(() =>
 const Header = React.lazy(() => import('./views/shared/Header'));
 const Home = React.lazy(() => import('./views/containers/Home'));
 const About = React.lazy(() => import('./views/containers/About'));
+const Approach = React.lazy(() => import('./views/containers/Approach'));
 
 function App() {
   const step = 25;
@@ -33,6 +34,7 @@ function App() {
           <Header />
           <Home />
           <About />
+          <Approach />
         </div>
       );
   };

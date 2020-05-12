@@ -81,7 +81,7 @@ export default function Header({ activeItem }) {
           <a href="#about" onClick={closeNav}>
             About Medaf
           </a>
-          <a href="#">Our Approach</a>
+          <a href="#approach">Our Approach</a>
           <a href="#">Team</a>
           <a href="#">Our Business</a>
           <a href="#">News & Events</a>

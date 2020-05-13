@@ -76,10 +76,10 @@
     z-index: 200;
     cursor: pointer;
     @include is-mobile {
-      display: none;
+      display: none !important;
     }
     @include is-tablet {
-      display: none;
+      display: none !important;
     }
   }
 }

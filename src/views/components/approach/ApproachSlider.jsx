@@ -1,9 +1,10 @@
 import React, { useState, Fragment } from 'react';
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import { Dots } from '@brainhubeu/react-carousel';
 import ApproachData from '../../../assets/data/approach.js';
 import Arrow from '../../../assets/images/about/arrow.png';
 import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/approach/slider.scss';
+import CustomCarousel from '../../shared/CustomCarousel.jsx';
 const ApproachSlide = React.lazy(() => import('./ApproachSlide'));
 
 export default function ApproachSlider() {
@@ -23,15 +24,9 @@ export default function ApproachSlider() {
   const renderContent = () => {
     return (
       <div className="approach-slider-wrapper">
-        <Carousel
-          value={activeSlideId}
-          onChange={setActiveSlideId}
-          infinite
-          autoPlay={4000}
-          animationSpeed={1000}
-          arrows={false}
-          clickToChange
-          centered
+        <CustomCarousel
+          activeSlideId={activeSlideId}
+          setActiveSlideId={setActiveSlideId}
         >
           {Object.keys(ApproachData).map((slideNumber) => (
             <ApproachSlide
@@ -40,7 +35,7 @@ export default function ApproachSlider() {
               innerSlides={ApproachData[slideNumber]}
             />
           ))}
-        </Carousel>
+        </CustomCarousel>
         <Dots
           thumbnails={thumbnails}
           value={activeSlideId}

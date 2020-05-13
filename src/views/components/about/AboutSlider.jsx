@@ -1,9 +1,10 @@
 import React, { useState, Fragment } from 'react';
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import { Dots } from '@brainhubeu/react-carousel';
 import AboutData from '../../../assets/data/about.js';
 import Arrow from '../../../assets/images/about/arrow.png';
 import '../../../assets/styles/components/about/slider.scss';
 const AboutSlide = React.lazy(() => import('./AboutSlide'));
+const CustomCarousel = React.lazy(() => import('../../shared/CustomCarousel'));
 
 export default function AboutSlider() {
   const [activeSlideId, setActiveSlideId] = useState(0);
@@ -21,20 +22,14 @@ export default function AboutSlider() {
   const renderContent = () => {
     return (
       <div className="about-slider-wrapper">
-        <Carousel
-          value={activeSlideId}
-          onChange={setActiveSlideId}
-          infinite
-          autoPlay={4000}
-          animationSpeed={1000}
-          arrows={false}
-          clickToChange
-          centered
+        <CustomCarousel
+          activeSlideId={activeSlideId}
+          setActiveSlideId={setActiveSlideId}
         >
           {AboutData.map((slide) => (
             <AboutSlide key={slide.id} content={slide} />
           ))}
-        </Carousel>
+        </CustomCarousel>
         <Dots
           thumbnails={thumbnails}
           value={activeSlideId}

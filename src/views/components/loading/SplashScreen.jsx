@@ -3,7 +3,7 @@ import Progress from './Progress';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 import logo from '../../../assets/images/medaf-typeface.png';
 import '../../../assets/styles/components/splash-screen.scss';
-import SplashScreenData from '../../../assets/data/splachscreen';
+import SplashScreenData from '../../../assets/data/splachscreen.js';
 const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function SplashScreen({ value }) {
@@ -12,6 +12,7 @@ export default function SplashScreen({ value }) {
     setCurrentSlideIndex((value / 100) * 4);
   }, [value]);
   const renderImage = () => {
+    if (currentSlideIndex > SplashScreenData.length - 1) return;
     const slideObject = SplashScreenData[currentSlideIndex];
     let imageSrc = null;
     if (isDeviceSmart()) imageSrc = slideObject.image.mobile;
@@ -19,6 +20,7 @@ export default function SplashScreen({ value }) {
     return <Img src={imageSrc} alt={slideObject.alt} />;
   };
   const renderText = () => {
+    if (currentSlideIndex > SplashScreenData.length - 1) return;
     return SplashScreenData[currentSlideIndex].text;
   };
 

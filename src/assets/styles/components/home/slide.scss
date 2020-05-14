@@ -18,6 +18,7 @@
     margin-bottom: 50px;
     text-align: justify;
     font-weight: lighter;
+    font-family: 'Suisse Regular';
     @include is-mobile {
       margin-bottom: 30px;
       line-height: 35px;
@@ -42,6 +43,7 @@
     }
     a {
       color: white;
+      font-family: 'Suisse Book';
     }
   }
 }

@@ -54,7 +54,7 @@
       font-size: 2.5rem;
       margin-bottom: 30px;
       text-align: justify;
-      font-weight: lighter;
+      font-family: 'Suisse Regular';
       @include is-mobile {
         font-size: 1.8rem;
       }
@@ -89,6 +89,7 @@
         padding-bottom: 10px;
         color: white;
         font-size: 1.2rem;
+        font-family: 'Suisse Light';
         @include is-mobile {
           font-size: 1.2rem;
           text-align: left;
@@ -97,6 +98,7 @@
       span {
         font-size: 1.4rem;
         text-decoration: underline;
+        font-family: 'Suisse Regular';
         @include is-mobile {
           font-size: 1rem;
         }

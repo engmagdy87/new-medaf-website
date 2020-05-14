@@ -1,6 +1,31 @@
 @import './variables.scss';
 @import './color-palette.scss';
 
+@font-face {
+  font-family: 'Suisse Book';
+  src: url("../fonts/Suisse\ Int'l\ Book.otf");
+}
+
+@font-face {
+  font-family: 'Suisse Light';
+  src: url("../fonts/Suisse\ Int'l\ Light.otf");
+}
+
+@font-face {
+  font-family: 'Suisse Regular';
+  src: url("../fonts/Suisse\ Int'l\ Regular.otf");
+}
+
+@font-face {
+  font-family: 'Suisse SemiBold';
+  src: url("../fonts/Suisse\ Int'l\ SemiBold.otf");
+}
+
+@font-face {
+  font-family: 'Suisse Thin';
+  src: url("../fonts/Suisse\ Int'l\ Thin.otf");
+}
+
 html {
   -webkit-overflow-scrolling: touch;
   overflow: hidden;

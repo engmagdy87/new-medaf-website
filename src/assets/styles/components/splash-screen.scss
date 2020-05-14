@@ -17,8 +17,9 @@
     width: 100px;
   }
   img:nth-child(2) {
-    width: 30vw;
-    height: 45vh;
+    width: 30%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
     @include is-mobile {
       width: 90%;
@@ -30,6 +31,7 @@
     padding-top: 4%;
     font-size: 1.8rem;
     letter-spacing: 18px;
+    font-family: 'Suisse Light';
     @include is-mobile {
       padding-top: 20%;
       font-size: 1.1rem;

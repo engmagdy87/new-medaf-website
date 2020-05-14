@@ -9,7 +9,7 @@
     margin-left: 10px;
     margin-bottom: 20px;
     font-size: 1.2rem;
-    font-weight: lighter;
+    font-family: 'Suisse Book';
   }
   &__cards {
     display: flex;
@@ -38,6 +38,7 @@
     }
     h1 {
       font-size: 2rem;
+      font-family: 'Suisse Regular';
       @include is-mobile {
         font-size: 1.5rem;
         margin-bottom: 0 !important;
@@ -62,9 +63,10 @@
       }
     }
     div p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      font-family: 'Suisse Light';
       @include is-mobile {
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
   }

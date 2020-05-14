@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Suisse Regular';
   @include is-mobile {
     height: $footer-height-mobile;
   }

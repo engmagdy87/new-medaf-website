@@ -1,19 +1,21 @@
 import React from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
-import Img from '../../shared/Img';
+const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function TeamMemberCard({ member, showMemberDetails }) {
   return (
-    <div className="team-slide-wrapper__member-card">
-      <div
-        className="team-slide-wrapper__member-card__content"
-        role="button"
-        onClick={() => showMemberDetails(member)}
-      >
-        <Img
-          src={isDeviceSmart() ? member.image.mobile : member.image.desktop}
-          alt={member.title}
-        />
+    <div
+      className="team-slide-wrapper__member-card"
+      role="button"
+      onClick={() => showMemberDetails(member)}
+    >
+      {isDeviceSmart() ? (
+        <Img src={member.image.mobile} alt={member.title} />
+      ) : null}
+      <div className="team-slide-wrapper__member-card__content">
+        {!isDeviceSmart() ? (
+          <Img src={member.image.desktop} alt={member.title} />
+        ) : null}
         <section>
           <h1>{member.name}</h1>
           <h2>{member.title}</h2>

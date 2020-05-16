@@ -57,15 +57,18 @@
     height: 70vh;
     margin: auto;
     @include is-mobile {
-      height: 70%;
+      height: 75vh;
       width: 90% !important;
-      margin: 10px auto;
+      margin: 20px auto;
     }
     img {
       object-fit: cover;
       width: 100%;
       height: 50%;
       margin-bottom: 20px;
+      @include is-mobile {
+        height: 65%;
+      }
     }
     h1 {
       font-size: 2rem;
@@ -103,7 +106,7 @@
       font-family: 'Suisse Light';
       font-weight: lighter;
       @include is-mobile {
-        font-size: 1rem;
+        display: none;
       }
       @include is-large-desktop {
         font-size: 1rem;
@@ -128,10 +131,30 @@
     display: block;
     margin: auto;
     position: relative;
+    @include is-mobile {
+      height: 75vh;
+      width: 90% !important;
+      margin: 20px auto;
+    }
+    img {
+      display: none;
+      @include is-mobile {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 80%;
+        margin-bottom: 20px;
+      }
+    }
     &__content {
       position: relative;
       img {
+        object-fit: cover;
         width: 100%;
+        display: block;
+        @include is-mobile {
+          display: none;
+        }
       }
       section {
         position: absolute;
@@ -139,6 +162,9 @@
         left: 0;
         padding-left: 8%;
         padding-bottom: 2%;
+        @include is-mobile {
+          position: relative;
+        }
         h1 {
           font-size: 1.7rem;
           font-family: 'Suisse Book';
@@ -150,11 +176,6 @@
           font-weight: lighter;
           margin-top: 0;
         }
-      }
-      @include is-mobile {
-        height: 70%;
-        width: 90% !important;
-        margin: 10px auto;
       }
     }
   }
@@ -202,25 +223,43 @@
       margin-top: 30px;
       padding-left: 50px;
       display: flex;
+      @include is-mobile {
+        margin-top: 0px;
+        width: 90%;
+        padding: 0 5%;
+      }
       img {
         width: 30%;
         padding-left: 10%;
         padding-right: 10%;
         padding-top: 0;
+        object-fit: cover;
+        @include is-mobile {
+          display: none;
+        }
       }
       section {
         width: 40%;
         padding-top: 0;
         display: block;
+        @include is-mobile {
+          width: 100%;
+        }
         h1 {
           font-family: 'Suisse Book';
           margin-bottom: 0;
+          @include is-mobile {
+            font-size: 1.4rem;
+          }
         }
         h2 {
           margin-top: 0;
           margin-bottom: 30px;
           font-family: 'Suisse Light';
           font-size: 1.2rem;
+          @include is-mobile {
+            font-size: 1.2rem;
+          }
         }
         section {
           height: 70%;
@@ -245,7 +284,7 @@
       }
     }
 
-    &__closebtn {
+    &__close-button {
       position: absolute;
       top: 20px;
       right: 45px;
@@ -259,7 +298,7 @@
 
         -webkit-overflow-scrolling: touch;
       }
-      &__closebtn {
+      &__close-button {
         font-size: 40px;
         top: 15px;
         right: 35px;

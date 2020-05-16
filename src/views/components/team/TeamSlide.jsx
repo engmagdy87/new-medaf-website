@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import BoardMemberCard from './BoardMemberCard';
-import TeamMemberCard from './TeamMemberCard';
 import '../../../assets/styles/components/team/slide.scss';
-import MemberDetails from './MemberDetails';
+const BoardMemberCard = React.lazy(() => import('./BoardMemberCard'));
+const TeamMemberCard = React.lazy(() => import('./TeamMemberCard'));
+const MemberDetails = React.lazy(() => import('./MemberDetails'));
 
 export default function TeamSlide({ innerSlides, slideNumber }) {
   const [showModal, setShowModal] = useState(false);

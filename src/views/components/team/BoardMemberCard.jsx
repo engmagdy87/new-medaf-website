@@ -1,17 +1,19 @@
 import React from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 import TruncateText from '../../../helpers/StringsHelper';
-import Img from '../../shared/Img';
+const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function BoardMemberCard({
   member,
-  cardWidth,
+  cardWidth = 100,
   showMemberDetails,
 }) {
   return (
     <div
       className="team-slide-wrapper__board-card"
-      style={{ width: `calc(${cardWidth}% - 0.5%)` }}
+      style={{
+        width: cardWidth === 100 ? '100%' : `calc(${cardWidth}% - 0.5%)`,
+      }}
     >
       <Img
         src={isDeviceSmart() ? member.image.mobile : member.image.desktop}

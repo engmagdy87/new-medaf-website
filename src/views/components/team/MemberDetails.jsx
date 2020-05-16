@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import Img from '../../shared/Img';
 import { useEffect } from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function MemberDetails({ member, showModal, setShowModal }) {
   useEffect(() => {
@@ -16,7 +16,9 @@ export default function MemberDetails({ member, showModal, setShowModal }) {
   const closeNav = () => {
     myModal.style.height = '0';
     setShowModal(false);
-    document.getElementById('arrow').style.display = 'block';
+
+    if (document.getElementById('arrow') !== null)
+      document.getElementById('arrow').style.display = 'block';
   };
   const renderContent = () => {
     if (member === null) return null;
@@ -26,7 +28,10 @@ export default function MemberDetails({ member, showModal, setShowModal }) {
           ref={(node) => (myModal = node)}
           className="team-slide-wrapper__modal__overlay"
         >
-          <a className="team-slide-wrapper__modal__closebtn" onClick={closeNav}>
+          <a
+            className="team-slide-wrapper__modal__close-button"
+            onClick={closeNav}
+          >
             &times;
           </a>
 

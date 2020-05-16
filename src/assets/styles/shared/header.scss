@@ -18,10 +18,17 @@
       display: block;
       margin-right: 20px;
     }
+    @include is-extra-large-desktop {
+      display: block;
+      margin-right: 20px;
+    }
   }
   &--mobile {
     display: block;
     @include is-large-desktop {
+      display: none;
+    }
+    @include is-extra-large-desktop {
       display: none;
     }
   }

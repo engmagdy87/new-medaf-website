@@ -113,7 +113,14 @@
 
 @mixin is-large-desktop {
   // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: 1200px) {
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin is-extra-large-desktop {
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1400px) {
     @content;
   }
 }

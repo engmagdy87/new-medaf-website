@@ -1,13 +1,13 @@
-const DesktopAdnan = require("../../assets/images/team/desktop/medaf-adnan.png")
-const DesktopJassim = require("../../assets/images/team/desktop/medaf-jassim.png")
-const DesktopMohab = require("../../assets/images/team/desktop/medaf-mohab.png")
-const DesktopYaser = require("../../assets/images/team/desktop/medaf-yaser.png")
-const DesktopPlaceholder = require("../../assets/images/team/desktop/medaf-placeholder.png")
-const MobileAdnan = require("../../assets/images/team/mobile/medaf-adnan.png")
-const MobileJassim = require("../../assets/images/team/mobile/medaf-jassim.png")
-const MobileMohab = require("../../assets/images/team/mobile/medaf-mohab.png")
-const MobileYaser = require("../../assets/images/team/mobile/medaf-yaser.png")
-const MobilePlaceholder = require("../../assets/images/team/mobile/medaf-placeholder.png")
+const DesktopAdnan = require("../../assets/images/team/desktop/medaf-team-adnan.jpg")
+const DesktopJassim = require("../../assets/images/team/desktop/medaf-team-jassim.jpg")
+const DesktopMohab = require("../../assets/images/team/desktop/medaf-team-mohab.jpg")
+const DesktopYaser = require("../../assets/images/team/desktop/medaf-team-yaser.jpg")
+const DesktopPlaceholder = require("../../assets/images/team/desktop/medaf-team-placeholder.jpg")
+const MobileAdnan = require("../../assets/images/team/mobile/medaf-team-adnan.jpg")
+const MobileJassim = require("../../assets/images/team/mobile/medaf-team-jassim.jpg")
+const MobileMohab = require("../../assets/images/team/mobile/medaf-team-mohab.jpg")
+const MobileYaser = require("../../assets/images/team/mobile/medaf-team-yaser.jpg")
+const MobilePlaceholder = require("../../assets/images/team/mobile/medaf-team-placeholder.jpg")
 
 export default {
     "0": [

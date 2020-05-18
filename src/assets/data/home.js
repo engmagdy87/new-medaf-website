@@ -1,9 +1,9 @@
-const DesktopImage1 = require("../../assets/images/home/desktop/medaf-home-1.png")
-const DesktopImage2 = require("../../assets/images/home/desktop/medaf-home-2.png")
-const DesktopImage3 = require("../../assets/images/home/desktop/medaf-home-3.png")
-const MobileImage1 = require("../../assets/images/home/mobile/medaf-home-1.png")
-const MobileImage2 = require("../../assets/images/home/mobile/medaf-home-2.png")
-const MobileImage3 = require("../../assets/images/home/mobile/medaf-home-3.png")
+const DesktopImage1 = require("../../assets/images/home/desktop/medaf-home-1.jpg")
+const DesktopImage2 = require("../../assets/images/home/desktop/medaf-home-2.jpg")
+const DesktopImage3 = require("../../assets/images/home/desktop/medaf-home-3.jpg")
+const MobileImage1 = require("../../assets/images/home/mobile/medaf-home-1.jpg")
+const MobileImage2 = require("../../assets/images/home/mobile/medaf-home-2.jpg")
+const MobileImage3 = require("../../assets/images/home/mobile/medaf-home-3.jpg")
 
 export default [
   {

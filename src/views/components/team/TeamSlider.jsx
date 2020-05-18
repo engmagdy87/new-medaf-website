@@ -22,6 +22,7 @@ export default function TeamSlider() {
         <CustomCarousel
           activeSlideId={activeSlideId}
           setActiveSlideId={setActiveSlideId}
+          isAutoPlayEnabled={false}
         >
           {Object.keys(TeamData).map((slideNumber) => (
             <TeamSlide

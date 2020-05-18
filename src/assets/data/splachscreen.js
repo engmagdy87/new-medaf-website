@@ -1,11 +1,11 @@
-const DesktopImage1 = require("../../assets/images/spinner/desktop/medaf-loading-1.png")
-const DesktopImage2 = require("../../assets/images/spinner/desktop/medaf-loading-2.png")
-const DesktopImage3 = require("../../assets/images/spinner/desktop/medaf-loading-3.png")
-const DesktopImage4 = require("../../assets/images/spinner/desktop/medaf-loading-4.png")
-const MobileImage1 = require("../../assets/images/spinner/mobile/medaf-loading-1.png")
-const MobileImage2 = require("../../assets/images/spinner/mobile/medaf-loading-2.png")
-const MobileImage3 = require("../../assets/images/spinner/mobile/medaf-loading-3.png")
-const MobileImage4 = require("../../assets/images/spinner/mobile/medaf-loading-4.png")
+const DesktopImage1 = require("../../assets/images/loading/desktop/medaf-loading-1.png")
+const DesktopImage2 = require("../../assets/images/loading/desktop/medaf-loading-2.png")
+const DesktopImage3 = require("../../assets/images/loading/desktop/medaf-loading-3.png")
+const DesktopImage4 = require("../../assets/images/loading/desktop/medaf-loading-4.png")
+const MobileImage1 = require("../../assets/images/loading/mobile/medaf-loading-1.png")
+const MobileImage2 = require("../../assets/images/loading/mobile/medaf-loading-2.png")
+const MobileImage3 = require("../../assets/images/loading/mobile/medaf-loading-3.png")
+const MobileImage4 = require("../../assets/images/loading/mobile/medaf-loading-4.png")
 
 export default [
   {

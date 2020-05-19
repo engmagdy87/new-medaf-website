@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import HomeData from '../../../assets/data/home.js';
-import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/home/slider.scss';
 import CustomCarousel from '../../shared/CustomCarousel.jsx';
 import { Carousel } from 'react-bootstrap';

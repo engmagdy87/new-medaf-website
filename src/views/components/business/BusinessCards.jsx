@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import BusinessData from '../../../assets/data/business.js';
-import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/business/cards.scss';
 
 const BusinessCard = React.lazy(() => import('./BusinessCard'));

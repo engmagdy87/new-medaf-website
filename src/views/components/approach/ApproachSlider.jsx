@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import ApproachData from '../../../assets/data/approach.js';
 import Arrow from '../../../assets/images/about/arrow.png';
-import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/approach/slider.scss';
 import CustomCarousel from '../../shared/CustomCarousel.jsx';
 import { Carousel } from 'react-bootstrap';

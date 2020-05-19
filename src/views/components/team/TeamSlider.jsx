@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import TeamData from '../../../assets/data/team.js';
 import Arrow from '../../../assets/images/about/arrow.png';
-import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/team/slider.scss';
 import { Carousel } from 'react-bootstrap';
 const CustomCarousel = React.lazy(() =>

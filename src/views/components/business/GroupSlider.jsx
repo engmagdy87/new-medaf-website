@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react';
 import BusinessData from '../../../assets/data/business.js';
-import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/business/cards.scss';
 import '../../../assets/styles/components/business/card.scss';
 import { Carousel } from 'react-bootstrap';

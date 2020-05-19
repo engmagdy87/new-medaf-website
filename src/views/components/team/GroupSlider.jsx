@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from 'react';
-import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/team/slider.scss';
 import '../../../assets/styles/components/team/slide.scss';
 import { Carousel } from 'react-bootstrap';

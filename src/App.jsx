@@ -9,6 +9,7 @@ const Home = React.lazy(() => import('./views/containers/Home'));
 const About = React.lazy(() => import('./views/containers/About'));
 const Approach = React.lazy(() => import('./views/containers/Approach'));
 const Team = React.lazy(() => import('./views/containers/Team'));
+const Business = React.lazy(() => import('./views/containers/Business'));
 
 function App() {
   const step = 25;
@@ -37,6 +38,7 @@ function App() {
           <About />
           <Approach />
           <Team />
+          <Business />
         </div>
       );
   };

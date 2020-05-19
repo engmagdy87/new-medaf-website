@@ -4,8 +4,10 @@
 
 .team-slide-wrapper {
   width: 92%;
+  height: 65vh;
+  margin: auto;
   &__cards {
-    margin-top: 2%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +23,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-row-gap: 5px;
+    margin-top: 50px;
     div[role='button']:nth-child(1) {
       grid-area: 1 / 1 / 2 / 2;
     }
@@ -48,10 +51,10 @@
   }
   &__board-card {
     display: block;
-    height: 70vh;
+    height: 50vh;
     margin: auto;
     @include is-mobile {
-      height: 75vh;
+      height: 80vh;
       width: 90% !important;
       margin: 20px auto;
     }
@@ -78,11 +81,15 @@
       font-weight: lighter;
       @include is-mobile {
         font-size: 1rem;
-        margin-bottom: 0 !important;
+        margin-bottom: 20px !important;
       }
     }
     div {
       overflow-y: auto;
+      height: 30%;
+      @include is-mobile {
+        height: 0;
+      }
       &::-webkit-scrollbar {
         width: 5px !important;
       }
@@ -176,7 +183,7 @@
   &__arrow {
     height: 60px;
     position: absolute;
-    bottom: -70px;
+    bottom: -40px;
     right: 5%;
     z-index: 1000;
     cursor: pointer;
@@ -257,7 +264,7 @@
           }
         }
         section {
-          height: 70%;
+          height: 50%;
           width: 100%;
           overflow-y: auto;
           &::-webkit-scrollbar {

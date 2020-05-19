@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react';
-import { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/team/slider.scss';
 import '../../../assets/styles/components/team/slide.scss';
+import { Carousel } from 'react-bootstrap';
 const CustomCarousel = React.lazy(() =>
   import('../../shared/CustomCarousel.jsx')
 );
@@ -19,28 +19,25 @@ export default function GroupSlider({ groupData, groupId }) {
     setShowModal(true);
   };
 
-  const thumbnails = new Array(groupData.length).fill(
-    <div
-      style={{ width: '30px', height: '2px', backgroundColor: 'white' }}
-    ></div>
-  );
   const renderSlides = (slide, index) => {
     switch (groupId) {
       case '0':
         return (
-          <BoardMemberCard
-            key={index}
-            member={slide}
-            showMemberDetails={showMemberDetails}
-          />
+          <Carousel.Item key={index}>
+            <BoardMemberCard
+              member={slide}
+              showMemberDetails={showMemberDetails}
+            />
+          </Carousel.Item>
         );
       case '1':
         return (
-          <TeamMemberCard
-            key={index}
-            member={slide}
-            showMemberDetails={showMemberDetails}
-          />
+          <Carousel.Item key={index}>
+            <TeamMemberCard
+              member={slide}
+              showMemberDetails={showMemberDetails}
+            />
+          </Carousel.Item>
         );
 
       default:
@@ -56,12 +53,6 @@ export default function GroupSlider({ groupData, groupId }) {
         >
           {groupData.map(renderSlides)}
         </CustomCarousel>
-        <Dots
-          thumbnails={thumbnails}
-          value={activeSlideId}
-          onChange={setActiveSlideId}
-          number={groupData.length}
-        />
         <MemberDetails
           member={selectedMember}
           showModal={showModal}

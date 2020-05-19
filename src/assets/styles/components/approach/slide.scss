@@ -2,8 +2,9 @@
 @import '../../mixins.scss';
 
 .approach-slide-wrapper {
-  width: 92%;
-  margin-top: 2%;
+  width: 94%;
+  margin: auto;
+  padding-top: 2%;
   &__title {
     text-transform: uppercase;
     margin-left: 10px;
@@ -39,6 +40,7 @@
     h1 {
       font-size: 2rem;
       font-family: 'Suisse Regular';
+      margin: 30px 0;
       @include is-mobile {
         font-size: 1.5rem;
         margin-bottom: 0 !important;

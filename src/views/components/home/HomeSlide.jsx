@@ -16,9 +16,7 @@ export default function HomeSlide({ content }) {
       <h1>{content.body}</h1>
       {content.actions.map((action, index) => (
         <div key={index}>
-          <a href={action.url} target="__blank">
-            {action.text}
-          </a>
+          <a href={action.url}>{action.text}</a>
           <br />
         </div>
       ))}

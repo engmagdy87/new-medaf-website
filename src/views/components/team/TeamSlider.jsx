@@ -3,6 +3,7 @@ import TeamData from '../../../assets/data/team.js';
 import Arrow from '../../../assets/images/about/arrow.png';
 import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/team/slider.scss';
+import { Carousel } from 'react-bootstrap';
 const CustomCarousel = React.lazy(() =>
   import('../../shared/CustomCarousel.jsx')
 );
@@ -22,14 +23,16 @@ export default function TeamSlider() {
         <CustomCarousel
           activeSlideId={activeSlideId}
           setActiveSlideId={setActiveSlideId}
-          isAutoPlayEnabled={false}
+          isAutoPlayEnabled={null}
+          showIndicators={false}
         >
           {Object.keys(TeamData).map((slideNumber) => (
-            <TeamSlide
-              key={slideNumber}
-              slideNumber={slideNumber}
-              innerSlides={TeamData[slideNumber]}
-            />
+            <Carousel.Item key={slideNumber}>
+              <TeamSlide
+                slideNumber={slideNumber}
+                innerSlides={TeamData[slideNumber]}
+              />
+            </Carousel.Item>
           ))}
         </CustomCarousel>
         <img

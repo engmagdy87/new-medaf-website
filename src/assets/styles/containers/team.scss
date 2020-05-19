@@ -3,7 +3,7 @@
 
 .team-wrapper {
   padding-top: $header-height;
-  height: calc(100% - #{$header-height});
+  height: 100%;
   position: relative;
   @include is-mobile {
     padding-top: $header-height-mobile;

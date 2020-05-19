@@ -40,4 +40,11 @@
 .business-cards-wrapper-mobile {
   height: 100%;
   display: block;
+  .carousel.slide {
+    .carousel-indicators {
+      right: unset !important;
+      left: -30px !important;
+      bottom: -50px !important;
+    }
+  }
 }

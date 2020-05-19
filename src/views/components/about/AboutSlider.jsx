@@ -1,18 +1,13 @@
 import React, { useState, Fragment } from 'react';
-import { Dots } from '@brainhubeu/react-carousel';
 import AboutData from '../../../assets/data/about.js';
 import Arrow from '../../../assets/images/about/arrow.png';
 import '../../../assets/styles/components/about/slider.scss';
+import { Carousel } from 'react-bootstrap';
 const AboutSlide = React.lazy(() => import('./AboutSlide'));
 const CustomCarousel = React.lazy(() => import('../../shared/CustomCarousel'));
 
 export default function AboutSlider() {
   const [activeSlideId, setActiveSlideId] = useState(0);
-  const thumbnails = new Array(AboutData.length).fill(
-    <div
-      style={{ width: '30px', height: '2px', backgroundColor: 'white' }}
-    ></div>
-  );
 
   const goToNextSlide = () => {
     if (activeSlideId === AboutData.length - 1) setActiveSlideId(0);
@@ -27,15 +22,12 @@ export default function AboutSlider() {
           setActiveSlideId={setActiveSlideId}
         >
           {AboutData.map((slide) => (
-            <AboutSlide key={slide.id} content={slide} />
+            <Carousel.Item key={slide.id}>
+              <AboutSlide content={slide} />
+            </Carousel.Item>
           ))}
         </CustomCarousel>
-        <Dots
-          thumbnails={thumbnails}
-          value={activeSlideId}
-          onChange={setActiveSlideId}
-          number={AboutData.length}
-        />
+
         <img
           src={Arrow}
           alt="arrow"

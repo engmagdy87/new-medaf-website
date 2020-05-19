@@ -4,9 +4,9 @@
 
 .business-card-wrapper {
   @include is-mobile {
-    height: 75vh;
+    height: 80vh;
     width: 90%;
-    padding-bottom: 10%;
+    margin: auto;
   }
   &__member-card {
     background-position: center center !important;

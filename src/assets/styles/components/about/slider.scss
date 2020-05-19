@@ -2,6 +2,12 @@
 
 .about-slider-wrapper {
   position: relative;
+  .carousel.slide {
+    .carousel-indicators {
+      left: 0 !important;
+      bottom: 0px !important;
+    }
+  }
   &__arrow {
     height: 60px;
     position: absolute;

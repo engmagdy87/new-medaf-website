@@ -12,7 +12,7 @@ export default [
     "actions": [
       {
         "text": "read more at about medaf",
-        "url": ""
+        "url": "#about"
       }
     ],
     "image": {
@@ -26,7 +26,7 @@ export default [
     "actions": [
       {
         "text": "read more at our approach",
-        "url": ""
+        "url": "#approach"
       }
     ],
     "image": {
@@ -40,11 +40,11 @@ export default [
     "actions": [
       {
         "text": "read more at our approach",
-        "url": ""
+        "url": "#approach"
       },
       {
         "text": "read more at news / events",
-        "url": ""
+        "url": "#news"
       }
     ],
     "image": {

@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
-import { Dots } from '@brainhubeu/react-carousel';
 import BusinessData from '../../../assets/data/business.js';
 import '@brainhubeu/react-carousel/lib/style.css';
 import '../../../assets/styles/components/business/cards.scss';
 import '../../../assets/styles/components/business/card.scss';
+import { Carousel } from 'react-bootstrap';
 const CustomCarousel = React.lazy(() =>
   import('../../shared/CustomCarousel.jsx')
 );
@@ -12,13 +12,10 @@ const BusinessCard = React.lazy(() => import('./BusinessCard'));
 export default function GroupSlider() {
   const [activeSlideId, setActiveSlideId] = useState(0);
 
-  const thumbnails = new Array(BusinessData.length).fill(
-    <div
-      style={{ width: '30px', height: '2px', backgroundColor: 'white' }}
-    ></div>
-  );
   const renderSlides = (slide, index) => (
-    <BusinessCard key={index} slide={slide} />
+    <Carousel.Item key={index}>
+      <BusinessCard slide={slide} />
+    </Carousel.Item>
   );
   const renderContent = () => {
     return (
@@ -29,12 +26,6 @@ export default function GroupSlider() {
         >
           {BusinessData.map(renderSlides)}
         </CustomCarousel>
-        <Dots
-          thumbnails={thumbnails}
-          value={activeSlideId}
-          onChange={setActiveSlideId}
-          number={BusinessData.length}
-        />
       </div>
     );
   };

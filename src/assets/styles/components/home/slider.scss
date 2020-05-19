@@ -2,14 +2,4 @@
 
 .home-slider-wrapper {
   position: relative;
-  .BrainhubCarousel__dots {
-    justify-content: flex-end !important;
-    position: absolute;
-    bottom: 40px;
-    right: 15%;
-    @include is-mobile {
-      bottom: 20px;
-      right: 5%;
-    }
-  }
 }

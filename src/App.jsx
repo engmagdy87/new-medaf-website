@@ -13,19 +13,21 @@ const Business = React.lazy(() => import('./views/containers/Business'));
 
 function App() {
   const step = 25;
+  const maximumValue = 100;
+  const speedFactor = 50;
   const [isLoading, setIsLoading] = useState(true);
   const [spinnerValue, setSpinnerValue] = useState(0);
 
   useEffect(() => {
     let interval;
 
-    if (spinnerValue !== 100)
+    if (spinnerValue !== maximumValue)
       interval = setInterval(() => {
         setSpinnerValue(spinnerValue + step);
         clearInterval(interval);
-      }, step * 100);
+      }, step * speedFactor);
 
-    if (spinnerValue === 100) setIsLoading(false);
+    if (spinnerValue === maximumValue) setIsLoading(false);
   }, [spinnerValue]);
 
   const renderContent = () => {

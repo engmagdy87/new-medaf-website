@@ -2,7 +2,15 @@
 
 .team-slider-wrapper {
   position: relative;
+  .carousel.slide {
+    height: 70vh !important;
+  }
   @include is-mobile {
-    height: 100%;
+    height: 100vh;
+    .carousel.slide {
+      .carousel-indicators {
+        bottom: -100px !important;
+      }
+    }
   }
 }

@@ -2,10 +2,20 @@
 
 .approach-slider-wrapper {
   position: relative;
-  .BrainhubCarousel__dots {
-    justify-content: flex-end !important;
-    position: absolute;
-    bottom: -50px;
-    left: 5%;
+  .carousel.slide {
+    .carousel-indicators {
+      right: unset !important;
+      left: -80px !important;
+      bottom: -50px !important;
+    }
+  }
+  @include is-mobile {
+    .carousel.slide {
+      .carousel-indicators {
+        right: unset !important;
+        left: -30px !important;
+        bottom: -50px !important;
+      }
+    }
   }
 }

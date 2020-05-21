@@ -33,20 +33,20 @@ function App() {
   }, [spinnerValue]);
 
   const renderContent = () => {
-    // if (isLoading) return <SplashScreen value={spinnerValue} />;
-    // else
-    return (
-      <div className="app-wrapper">
-        <Header />
-        <Home />
-        <About />
-        <Approach />
-        <Team />
-        <Business />
-        <News />
-        <Contact />
-      </div>
-    );
+    if (isLoading) return <SplashScreen value={spinnerValue} />;
+    else
+      return (
+        <div className="app-wrapper">
+          <Header />
+          <Home />
+          <About />
+          <Approach />
+          <Team />
+          <Business />
+          <News />
+          <Contact />
+        </div>
+      );
   };
 
   return (

@@ -56,5 +56,4 @@ export default [
             mobile: MobileImage4
         }
     },
-
 ]

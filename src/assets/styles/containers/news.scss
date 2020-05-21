@@ -8,6 +8,7 @@
   h1 {
     margin-left: 3%;
     font-size: 1.2rem;
+    font-family: 'Suisse Book';
   }
   @include is-mobile {
     padding-top: $header-height-mobile;

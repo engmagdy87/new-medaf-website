@@ -1,0 +1,46 @@
+@import '../../mixins.scss';
+
+.identity-card-wrapper {
+  border-top: 1px solid white;
+  width: 90%;
+  margin-bottom: 20px;
+  @include is-mobile {
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    padding-left: 0;
+    font-family: 'Suisse Book';
+  }
+  div {
+    display: flex;
+    section {
+      display: block;
+      p {
+        color: gray;
+        font-family: 'Suisse Regular';
+      }
+      h5 {
+        color: rgba($color: #fff, $alpha: 0.8);
+        font-size: 1rem;
+        font-family: 'Suisse Light';
+      }
+    }
+    section:nth-child(1) {
+      width: 45%;
+      margin-right: 40px;
+      @include is-mobile {
+        width: 50%;
+      }
+    }
+    section:nth-child(2) {
+      width: 40%;
+      @include is-mobile {
+        width: 50%;
+      }
+    }
+  }
+}

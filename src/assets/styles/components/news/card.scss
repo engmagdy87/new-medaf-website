@@ -27,6 +27,7 @@
     h1 {
       font-size: 1.3rem;
       margin: 0;
+      font-family: 'Suisse Book';
       @include is-mobile {
         margin-bottom: 20px;
       }
@@ -37,6 +38,7 @@
       position: absolute;
       bottom: 0;
       font-size: 0.9rem;
+      font-family: 'Suisse Light';
       @include is-mobile {
         position: relative;
       }

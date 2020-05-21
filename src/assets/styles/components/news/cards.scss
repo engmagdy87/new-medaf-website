@@ -9,7 +9,7 @@
   width: 94%;
   height: 70vh;
   margin: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   &::-webkit-scrollbar {
     width: 5px !important;
   }

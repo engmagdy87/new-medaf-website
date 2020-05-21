@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.news-wrapper {
+  padding-top: $header-height;
+  height: 96%;
+  position: relative;
+  h1 {
+    margin-left: 3%;
+    font-size: 1.2rem;
+  }
+  @include is-mobile {
+    padding-top: $header-height-mobile;
+  }
+}

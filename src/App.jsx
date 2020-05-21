@@ -10,6 +10,7 @@ const About = React.lazy(() => import('./views/containers/About'));
 const Approach = React.lazy(() => import('./views/containers/Approach'));
 const Team = React.lazy(() => import('./views/containers/Team'));
 const Business = React.lazy(() => import('./views/containers/Business'));
+const News = React.lazy(() => import('./views/containers/News'));
 
 function App() {
   const step = 25;
@@ -31,18 +32,19 @@ function App() {
   }, [spinnerValue]);
 
   const renderContent = () => {
-    if (isLoading) return <SplashScreen value={spinnerValue} />;
-    else
-      return (
-        <div className="app-wrapper">
-          <Header />
-          <Home />
-          <About />
-          <Approach />
-          <Team />
-          <Business />
-        </div>
-      );
+    // if (isLoading) return <SplashScreen value={spinnerValue} />;
+    // else
+    return (
+      <div className="app-wrapper">
+        <Header />
+        <Home />
+        <About />
+        <Approach />
+        <Team />
+        <Business />
+        <News />
+      </div>
+    );
   };
 
   return (

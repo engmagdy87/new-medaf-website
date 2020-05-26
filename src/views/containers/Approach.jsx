@@ -3,10 +3,10 @@ import ApproachData from '../../assets/data/approach.js';
 import '../../assets/styles/containers/approach.scss';
 import isDeviceSmart from '../../helpers/DetectIsDeviceSmart.js';
 const ApproachSlider = React.lazy(() =>
-  import('../components/approach/1/ApproachSlider')
+  import('../components/approach/ApproachSlider')
 );
 const GroupSlider = React.lazy(() =>
-  import('../components/approach/1/GroupSlider')
+  import('../components/approach/GroupSlider')
 );
 
 export default function Approach() {

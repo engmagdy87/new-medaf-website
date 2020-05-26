@@ -1,9 +1,9 @@
 import React, { useState, Fragment } from 'react';
 import { Carousel } from 'react-bootstrap';
-import '../../../../assets/styles/components/approach/slider.scss';
-import '../../../../assets/styles/components/approach/slide.scss';
+import '../../../assets/styles/components/approach/slider.scss';
+import '../../../assets/styles/components/approach/slide.scss';
 const CustomCarousel = React.lazy(() =>
-  import('../../../shared/CustomCarousel.jsx')
+  import('../../shared/CustomCarousel.jsx')
 );
 const ApproachCard = React.lazy(() => import('./ApproachCard'));
 

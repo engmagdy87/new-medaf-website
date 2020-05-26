@@ -1,6 +1,6 @@
 import React from 'react';
-import isDeviceSmart from '../../../../helpers/DetectIsDeviceSmart';
-const Img = React.lazy(() => import('../../../shared/Img'));
+import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function ApproachCard({ card, totalCards = 1 }) {
   return (

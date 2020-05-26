@@ -6,28 +6,42 @@ import '../../../assets/styles/components/splash-screen.scss';
 import SplashScreenData from '../../../assets/data/splachscreen.js';
 const Img = React.lazy(() => import('../../shared/Img'));
 
-export default function SplashScreen({ value }) {
+export default function SplashScreen({ value, totalTime }) {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  useEffect(() => {
+    animateImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   useEffect(() => {
     setCurrentSlideIndex((value / 100) * 4);
   }, [value]);
-  const renderImage = () => {
-    if (currentSlideIndex > SplashScreenData.length - 1) return;
-    const slideObject = SplashScreenData[currentSlideIndex];
-    let imageSrc = null;
-    if (isDeviceSmart()) imageSrc = slideObject.image.mobile;
-    else imageSrc = slideObject.image.desktop;
-    return <Img src={imageSrc} alt={slideObject.alt} />;
-  };
   const renderText = () => {
     if (currentSlideIndex > SplashScreenData.length - 1) return;
     return SplashScreenData[currentSlideIndex].text;
   };
 
+  const animateImages = () => {
+    const imageContainer = document.getElementById('splachscreen-image');
+    var keyFrames = SplashScreenData.map((slideObject) => {
+      let imageSrc = null;
+      if (isDeviceSmart()) imageSrc = `url(${slideObject.image.mobile})`;
+      else imageSrc = `url(${slideObject.image.desktop})`;
+      return { backgroundImage: imageSrc };
+    });
+
+    var timing = {
+      duration: totalTime,
+    };
+    imageContainer.animate(keyFrames, timing);
+  };
+
   return (
     <div className="splash-screen-wrapper">
       <Img src={logo} alt={'medaf logo'} />
-      {renderImage()}
+      <div
+        id="splachscreen-image"
+        className="splash-screen-wrapper__image"
+      ></div>
       <Progress value={value} />
       <p>{renderText()}</p>
     </div>

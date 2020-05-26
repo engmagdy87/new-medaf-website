@@ -13,14 +13,17 @@
     margin: 0 auto;
     padding: 2%;
   }
-  img:nth-child(1) {
+  img {
     width: 150px;
   }
-  img:nth-child(2) {
+  &__image {
     width: 30%;
     max-width: 400px;
-    height: auto;
-    object-fit: cover;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
     @include is-mobile {
       width: 90%;
       height: 45vh;

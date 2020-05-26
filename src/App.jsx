@@ -17,7 +17,7 @@ const Contact = React.lazy(() => import('./views/containers/Contact'));
 function App() {
   const step = 25;
   const maximumValue = 100;
-  const speedFactor = 50;
+  const speedFactor = 100;
   const [activeItem, setActiveItem] = useState('home');
   const [isLoading, setIsLoading] = useState(true);
   const [spinnerValue, setSpinnerValue] = useState(0);
@@ -40,7 +40,13 @@ function App() {
   };
 
   const renderContent = () => {
-    if (isLoading) return <SplashScreen value={spinnerValue} />;
+    if (isLoading)
+      return (
+        <SplashScreen
+          value={spinnerValue}
+          totalTime={maximumValue * speedFactor}
+        />
+      );
     else
       return (
         <div id="app" className="app-wrapper" onScroll={setHeaderActiveItem}>

@@ -8,6 +8,14 @@
       bottom: 0px !important;
     }
   }
+  @media (max-height: 680px) and (min-width: 1200px) {
+    .carousel.slide {
+      .carousel-indicators {
+        left: 0 !important;
+        bottom: -60px !important;
+      }
+    }
+  }
   &__arrow {
     height: 60px;
     position: absolute;

@@ -21,6 +21,9 @@
     background-color: rgba($color: #fff, $alpha: 0.8) !important;
     border-radius: 20px !important;
   }
+  @media (max-height: 680px) and (min-width: 1200px) {
+    height: 90vh;
+  }
 }
 
 .news-cards-wrapper-mobile {

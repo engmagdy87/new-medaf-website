@@ -19,7 +19,8 @@
     object-fit: cover;
     margin-bottom: 10px;
     @media (max-height: 680px) and (min-width: 1200px) {
-      height: 40%;
+      margin-bottom: 5px;
+      height: 60%;
     }
   }
   section {

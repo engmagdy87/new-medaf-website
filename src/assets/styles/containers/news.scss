@@ -13,4 +13,7 @@
   @include is-mobile {
     padding-top: $header-height-mobile;
   }
+  @media (max-height: 680px) and (min-width: 1200px) {
+    height: 100%;
+  }
 }

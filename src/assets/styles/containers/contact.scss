@@ -2,6 +2,7 @@
 @import '../mixins.scss';
 
 .contact-wrapper {
+  display: grid;
   position: relative;
   padding-top: $header-height;
   height: 90%;
@@ -9,6 +10,7 @@
   @include is-mobile {
     padding-top: $header-height-mobile;
     height: max-content;
+    display: block;
   }
   h1 {
     font-size: 1.2rem;

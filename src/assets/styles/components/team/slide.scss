@@ -6,6 +6,9 @@
   width: 92%;
   height: 65vh;
   margin: auto;
+  @media (max-height: 680px) and (min-width: 1200px) {
+    overflow-y: auto;
+  }
   &__cards {
     margin-top: 5%;
     display: flex;
@@ -15,6 +18,9 @@
       display: block;
       height: 70vh;
       overflow-y: auto;
+    }
+    @media (max-height: 680px) and (min-width: 1200px) {
+      margin-top: 0;
     }
   }
   &__grid {
@@ -66,6 +72,9 @@
       @include is-mobile {
         height: 65%;
       }
+      @media (max-height: 680px) and (min-width: 1200px) {
+        height: 45%;
+      }
     }
     h1 {
       font-size: 2rem;
@@ -73,6 +82,9 @@
       @include is-mobile {
         font-size: 1.5rem;
         margin-bottom: 0 !important;
+      }
+      @media (max-height: 680px) and (min-width: 1200px) {
+        font-size: 1.3rem;
       }
     }
     h2 {
@@ -82,6 +94,9 @@
       @include is-mobile {
         font-size: 1rem;
         margin-bottom: 20px !important;
+      }
+      @media (max-height: 680px) and (min-width: 1200px) {
+        font-size: 0.8rem;
       }
     }
     div {
@@ -115,6 +130,9 @@
       @include is-extra-large-desktop {
         font-size: 0.95rem;
       }
+      @media (max-height: 680px) and (min-width: 1200px) {
+        font-size: 0.95rem;
+      }
     }
     button {
       background: transparent;
@@ -126,6 +144,9 @@
       font-family: 'Suisse Book';
       letter-spacing: 3px;
       cursor: pointer;
+      @media (max-height: 680px) and (min-width: 1200px) {
+        font-size: 0.8rem;
+      }
     }
   }
   &__member-card {
@@ -137,6 +158,7 @@
       width: 90% !important;
       margin: 20px auto;
     }
+
     img {
       display: none;
       @include is-mobile {
@@ -187,6 +209,9 @@
     right: 5%;
     z-index: 1000;
     cursor: pointer;
+    @media (max-height: 680px) and (min-width: 1200px) {
+      bottom: 0;
+    }
     &--right-dir {
       transform: rotate(0);
       right: 5%;
@@ -231,13 +256,17 @@
         padding: 0 5%;
       }
       img {
-        width: 30%;
+        width: 50%;
+        height: 50vh;
         padding-left: 10%;
         padding-right: 10%;
         padding-top: 0;
         object-fit: cover;
         @include is-mobile {
           display: none;
+        }
+        @media (max-height: 680px) and (min-width: 1200px) {
+          width: 45%;
         }
       }
       section {

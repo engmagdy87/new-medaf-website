@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Carousel } from 'react-bootstrap';
+import isDeviceSmart from '../../helpers/DetectIsDeviceSmart';
 
 export default function CustomCarousel({
   children,
@@ -15,7 +16,7 @@ export default function CustomCarousel({
         activeIndex={activeSlideId}
         onSelect={setActiveSlideId}
         indicators={showIndicators}
-        interval={isAutoPlayEnabled}
+        interval={isDeviceSmart() ? null : isAutoPlayEnabled}
       >
         {children}
       </Carousel>

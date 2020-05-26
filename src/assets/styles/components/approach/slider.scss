@@ -10,6 +10,7 @@
     }
   }
   @include is-mobile {
+    height: 100vh;
     .carousel.slide {
       .carousel-indicators {
         right: unset !important;

@@ -7,5 +7,6 @@
   position: relative;
   @include is-mobile {
     padding-top: $header-height-mobile;
+    height: max-content;
   }
 }

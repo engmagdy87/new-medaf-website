@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect, Suspense } from 'react';
+import whatIsTheSectionAppearInViewport from './helpers/DetectSectionInViewportHelper';
 import './assets/styles/app.scss';
 
 const SplashScreen = React.lazy(() =>
@@ -17,6 +18,7 @@ function App() {
   const step = 25;
   const maximumValue = 100;
   const speedFactor = 50;
+  const [activeItem, setActiveItem] = useState('home');
   const [isLoading, setIsLoading] = useState(true);
   const [spinnerValue, setSpinnerValue] = useState(0);
 
@@ -32,12 +34,17 @@ function App() {
     if (spinnerValue === maximumValue) setIsLoading(false);
   }, [spinnerValue]);
 
+  const setHeaderActiveItem = () => {
+    const currentActiveItem = whatIsTheSectionAppearInViewport();
+    if (currentActiveItem !== activeItem) setActiveItem(currentActiveItem);
+  };
+
   const renderContent = () => {
     if (isLoading) return <SplashScreen value={spinnerValue} />;
     else
       return (
-        <div className="app-wrapper">
-          <Header />
+        <div id="app" className="app-wrapper" onScroll={setHeaderActiveItem}>
+          <Header activeItem={activeItem} />
           <Home />
           <About />
           <Approach />

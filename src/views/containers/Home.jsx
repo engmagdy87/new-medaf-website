@@ -5,7 +5,7 @@ const Footer = React.lazy(() => import('../shared/Footer'));
 
 export default function Home() {
   return (
-    <div id="home" className="home-wrapper">
+    <div id="home" className="wrapper home-wrapper">
       <HomeSlider />
       <Footer />
     </div>

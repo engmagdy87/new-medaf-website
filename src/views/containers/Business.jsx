@@ -15,7 +15,7 @@ export default function Business() {
   };
 
   return (
-    <div id="business" className="business-wrapper">
+    <div id="business" className="wrapper business-wrapper">
       {renderContent()}
     </div>
   );

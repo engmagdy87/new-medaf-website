@@ -20,7 +20,7 @@ export default function Team() {
   };
 
   return (
-    <div id="team" className="team-wrapper">
+    <div id="team" className="wrapper team-wrapper">
       {renderContent()}
     </div>
   );

@@ -20,7 +20,7 @@ export default function Approach() {
   };
 
   return (
-    <div id="approach" className="approach-wrapper">
+    <div id="approach" className="wrapper approach-wrapper">
       {renderContent()}
     </div>
   );

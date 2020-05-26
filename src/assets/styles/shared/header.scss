@@ -131,6 +131,7 @@
   text-align: left;
   margin-top: 30px;
   padding-left: 50px;
+  list-style: none;
   &__text {
     &--active {
       color: $primary !important;
@@ -141,7 +142,7 @@
   }
 }
 
-.overlay a {
+.overlay li a {
   padding: 8px;
   text-decoration: none;
   font-size: 1.6rem;
@@ -150,8 +151,8 @@
   transition: 0.3s;
 }
 
-.overlay a:hover,
-.overlay a:focus {
+.overlay li a:hover,
+.overlay li a:focus {
   color: $primary;
 }
 

@@ -75,27 +75,73 @@ export default function Header({ activeItem }) {
         </a>
 
         <div className="overlay-content">
-          <a href="#home" onClick={closeNav}>
-            Home
-          </a>
-          <a href="#about" onClick={closeNav}>
-            About Medaf
-          </a>
-          <a href="#approach" onClick={closeNav}>
-            Our Approach
-          </a>
-          <a href="#team" onClick={closeNav}>
-            Team
-          </a>
-          <a href="#business" onClick={closeNav}>
-            Our Business
-          </a>
-          <a href="#news" onClick={closeNav}>
-            News & Events
-          </a>
-          <a href="#contact" onClick={closeNav}>
-            Contact Us
-          </a>
+          <li
+            className={
+              activeItem === 'home' ? 'header-wrapper__navLinks--active' : ''
+            }
+          >
+            <a href="#home" onClick={closeNav}>
+              Home
+            </a>
+          </li>
+          <li
+            className={
+              activeItem === 'about' ? 'header-wrapper__navLinks--active' : ''
+            }
+          >
+            <a href="#about" onClick={closeNav}>
+              About Medaf
+            </a>
+          </li>
+          <li
+            className={
+              activeItem === 'approach'
+                ? 'header-wrapper__navLinks--active'
+                : ''
+            }
+          >
+            <a href="#approach" onClick={closeNav}>
+              Our Approach
+            </a>
+          </li>
+          <li
+            className={
+              activeItem === 'team' ? 'header-wrapper__navLinks--active' : ''
+            }
+          >
+            <a href="#team" onClick={closeNav}>
+              Team
+            </a>
+          </li>
+          <li
+            className={
+              activeItem === 'business'
+                ? 'header-wrapper__navLinks--active'
+                : ''
+            }
+          >
+            <a href="#business" onClick={closeNav}>
+              Our Business
+            </a>
+          </li>
+          <li
+            className={
+              activeItem === 'news' ? 'header-wrapper__navLinks--active' : ''
+            }
+          >
+            <a href="#news" onClick={closeNav}>
+              News & Events
+            </a>
+          </li>
+          <li
+            className={
+              activeItem === 'contact' ? 'header-wrapper__navLinks--active' : ''
+            }
+          >
+            <a href="#contact" onClick={closeNav}>
+              Contact Us
+            </a>
+          </li>
         </div>
       </div>
 

@@ -17,7 +17,7 @@ export default function News() {
   };
 
   return (
-    <div id="contact" className="contact-wrapper">
+    <div id="contact" className="wrapper contact-wrapper">
       <h1>FIND US HERE</h1>
       <section className="contact-wrapper__content">
         <Img src={imageSrc} alt="map" />

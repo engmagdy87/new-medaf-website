@@ -16,9 +16,7 @@ export default function ApproachCard({ card, totalCards = 1 }) {
         <Img src={card.image.desktop} alt={card.title} />
       ) : null}
       <h1>{card.title}</h1>
-      <div>
-        <p>{card.body}</p>
-      </div>
+      <div>{card.body}</div>
     </div>
   );
 }

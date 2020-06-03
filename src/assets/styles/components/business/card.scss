@@ -92,13 +92,25 @@
             font-size: 1.4rem;
             padding-top: 80px;
           }
+          @media (max-height: 680px) and (min-width: 1200px) {
+            padding-top: 30px;
+            margin-bottom: 10px;
+          }
         }
 
-        section {
+        div {
           height: 70%;
           width: 100%;
+          font-family: 'Suisse Light';
+          font-size: 1.4rem;
+          line-height: 30px;
           @include is-mobile {
-            height: 60%;
+            height: 45%;
+            margin-top: 20px;
+            font-size: 1.2rem;
+          }
+          @media (max-height: 680px) and (min-width: 1200px) {
+            height: 50%;
           }
           overflow-y: auto;
           &::-webkit-scrollbar {
@@ -112,12 +124,6 @@
             background-color: rgba($color: #fff, $alpha: 0.8) !important;
             border-radius: 20px !important;
           }
-          p {
-            font-family: 'Suisse Light';
-            font-size: 1.4rem;
-            line-height: 30px;
-            margin-top: 50px;
-          }
         }
         a {
           font-family: 'Suisse Book';
@@ -129,6 +135,9 @@
           top: 90%;
           left: 0;
           letter-spacing: 5px;
+          @media (max-height: 680px) and (min-width: 1200px) {
+            top: 85%;
+          }
         }
       }
     }

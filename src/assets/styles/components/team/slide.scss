@@ -299,10 +299,15 @@
             font-size: 1.2rem;
           }
         }
-        section {
+        div {
           height: 50%;
           width: 100%;
           overflow-y: auto;
+          font-family: 'Suisse Light';
+          font-size: 1.2rem;
+          @media (max-height: 680px) and (min-width: 1200px) {
+            height: 25%;
+          }
           &::-webkit-scrollbar {
             width: 5px !important;
           }
@@ -314,10 +319,6 @@
             background-color: rgba($color: #fff, $alpha: 0.8) !important;
             border-radius: 20px !important;
           }
-          p {
-            font-family: 'Suisse Light';
-            font-size: 1.2rem;
-          }
         }
       }
     }
@@ -328,6 +329,7 @@
       right: 45px;
       font-size: 60px;
       cursor: pointer;
+      z-index: 500;
     }
 
     @media screen and (max-height: 450px) {
@@ -340,6 +342,7 @@
         font-size: 40px;
         top: 15px;
         right: 35px;
+        z-index: 500;
       }
     }
   }

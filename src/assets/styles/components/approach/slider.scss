@@ -19,4 +19,13 @@
       }
     }
   }
+  @media (max-height: 680px) and (min-width: 1200px) {
+    .carousel.slide {
+      .carousel-indicators {
+        right: unset !important;
+        left: -30px !important;
+        bottom: 0px !important;
+      }
+    }
+  }
 }

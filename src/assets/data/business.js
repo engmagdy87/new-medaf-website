@@ -58,7 +58,7 @@ export default [
         "id": 2,
         "title": 'PRO-TECH',
         "completeTitle": "PROTECH- New Smart Egypt for Programming Technologies.",
-        "description": 'Protech offers a wide array of solutions in technological innovation. With automation on the rise, and technological advancements gaining exponential momentum, our solu- R E A D support MORE tions are tailored to cost-effectively the needs of emerging markets. We help our clients’ companies gain access to digital solutions in order to both 1) gain compet- itive advantage and 2) navigate the ever-changing land- scape of the technological world.',
+        "description": 'Protech offers a wide array of solutions in technological innovation. With automation on the rise, and technological advancements gaining exponential momentum, our solu- R E A D support MORE tions are tailored to cost-effectively the needs of emerging markets. We help our clients’ companies gain access to digital solutions in order to both 1) gain competitive advantage and 2) navigate the ever-changing landscape of the technological world.',
         "image": {
             desktop: DesktopImage3,
             mobile: MobileImage3

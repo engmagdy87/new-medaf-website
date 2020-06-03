@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 const Img = React.lazy(() => import('../../shared/Img'));
 
-export default function MemberDetails({ member, showModal, setShowModal }) {
+export default function CardDetails({ card, showModal, setShowModal }) {
   useEffect(() => {
     if (showModal) openNav();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -21,7 +21,7 @@ export default function MemberDetails({ member, showModal, setShowModal }) {
       document.getElementById('arrow').style.display = 'block';
   };
   const renderContent = () => {
-    if (member === null) return null;
+    if (card === null) return null;
     return (
       <div className="business-card-wrapper__modal">
         <div
@@ -37,15 +37,13 @@ export default function MemberDetails({ member, showModal, setShowModal }) {
 
           <div className="business-card-wrapper__modal__content">
             <Img
-              src={isDeviceSmart() ? member.image.mobile : member.image.desktop}
-              alt={member.completeTitle}
+              src={isDeviceSmart() ? card.image.mobile : card.image.desktop}
+              alt={card.completeTitle}
             />
             <section>
-              <h1>{member.completeTitle}</h1>
-              <section>
-                <p>{member.description}</p>
-              </section>
-              <a href={member.website.url}>{member.website.text}</a>
+              <h1>{card.completeTitle}</h1>
+              <div>{card.description}</div>
+              <a href={card.website.url}>{card.website.text}</a>
             </section>
           </div>
         </div>

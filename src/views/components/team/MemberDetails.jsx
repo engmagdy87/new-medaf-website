@@ -43,9 +43,7 @@ export default function MemberDetails({ member, showModal, setShowModal }) {
             <section>
               <h1>{member.name}</h1>
               <h2>{member.title}</h2>
-              <section>
-                <p>{member.bio}</p>
-              </section>
+              <div>{member.bio}</div>
             </section>
           </div>
         </div>

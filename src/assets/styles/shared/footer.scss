@@ -11,5 +11,6 @@
   font-family: 'Suisse Regular';
   @include is-mobile {
     height: $footer-height-mobile;
+    text-align: center;
   }
 }

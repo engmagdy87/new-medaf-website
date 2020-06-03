@@ -1,7 +1,7 @@
 import React from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 
-export default function BusinessMemberCard({ member, showMemberDetails }) {
+export default function BusinessMemberCard({ member, showCardDetails }) {
   const imageSrc = isDeviceSmart() ? member.image.mobile : member.image.desktop;
   return (
     <div
@@ -12,7 +12,7 @@ export default function BusinessMemberCard({ member, showMemberDetails }) {
     >
       <h2>{member.title}</h2>
       {member.actions.map((action, index) => (
-        <span key={index} onClick={() => showMemberDetails(member)}>
+        <span key={index} onClick={() => showCardDetails(member)}>
           {action.text}
         </span>
       ))}

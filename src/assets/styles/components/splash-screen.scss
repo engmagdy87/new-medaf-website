@@ -29,6 +29,11 @@
       height: 45vh;
       margin-top: 25px;
     }
+    @media (max-height: 680px) and (min-width: 1200px) {
+      width: 30%;
+      max-width: 250px;
+      height: 250px;
+    }
   }
   p {
     padding-top: 4%;

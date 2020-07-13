@@ -40,32 +40,26 @@ function App() {
   };
 
   const renderContent = () => {
+    // if (isLoading)
+    //   return (
+    //     <SplashScreen
+    //       value={spinnerValue}
+    //       totalTime={maximumValue * speedFactor}
+    //     />
+    //   );
+    // else
     return (
-      <SplashScreen
-        value={spinnerValue}
-        totalTime={maximumValue * speedFactor}
-      />
+      <div id="app" className="app-wrapper" onScroll={setHeaderActiveItem}>
+        <Header activeItem={activeItem} />
+        <Home />
+        <About />
+        <Approach />
+        <Team />
+        <Business />
+        <News />
+        <Contact />
+      </div>
     );
-    if (isLoading)
-      return (
-        <SplashScreen
-          value={spinnerValue}
-          totalTime={maximumValue * speedFactor}
-        />
-      );
-    else
-      return (
-        <div id="app" className="app-wrapper" onScroll={setHeaderActiveItem}>
-          <Header activeItem={activeItem} />
-          <Home />
-          <About />
-          <Approach />
-          <Team />
-          <Business />
-          <News />
-          <Contact />
-        </div>
-      );
   };
 
   return (

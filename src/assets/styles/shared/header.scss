@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: white !important;
+  background-color: white;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -67,6 +67,7 @@
   }
   &__navLinks {
     list-style: none;
+    margin-bottom: 0;
     li {
       display: inline-block;
       cursor: pointer;

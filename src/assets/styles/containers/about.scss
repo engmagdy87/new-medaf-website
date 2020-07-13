@@ -3,7 +3,7 @@
 
 .about-wrapper {
   padding-top: $header-height;
-  height: 100%;
+  height: max-content;
   position: relative;
   @include is-mobile {
     padding-top: $header-height-mobile;

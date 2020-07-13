@@ -15,9 +15,9 @@ const News = React.lazy(() => import('./views/containers/News'));
 const Contact = React.lazy(() => import('./views/containers/Contact'));
 
 function App() {
-  const step = 25;
+  const step = 20;
   const maximumValue = 100;
-  const speedFactor = 100;
+  const speedFactor = 200;
   const [activeItem, setActiveItem] = useState('home');
   const [isLoading, setIsLoading] = useState(true);
   const [spinnerValue, setSpinnerValue] = useState(0);

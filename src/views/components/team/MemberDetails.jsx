@@ -10,7 +10,7 @@ export default function MemberDetails({ member, showModal, setShowModal }) {
   }, [showModal]);
   let myModal;
   const openNav = () => {
-    myModal.style.height = '100%';
+    myModal.style.height = isDeviceSmart() ? 'calc(100% - 75px)' : '100%';
   };
 
   const closeNav = () => {

@@ -1,27 +1,17 @@
 import React from 'react';
+import ApproachCard from '../components/approach/ApproachCard.jsx';
 import ApproachData from '../../assets/data/approach.js';
+import MEDAFLogo from '../../assets/images/medaf-icon-white.png';
 import '../../assets/styles/containers/approach.scss';
-import isDeviceSmart from '../../helpers/DetectIsDeviceSmart.js';
-const ApproachSlider = React.lazy(() =>
-  import('../components/approach/ApproachSlider')
-);
-const GroupSlider = React.lazy(() =>
-  import('../components/approach/GroupSlider')
-);
+const Img = React.lazy(() => import('../shared/Img'));
 
 export default function Approach() {
-  const renderContent = () => {
-    if (isDeviceSmart())
-      return Object.keys(ApproachData).map((groupId) => (
-        <GroupSlider key={groupId} groupData={ApproachData[groupId].data} />
-      ));
-
-    return <ApproachSlider />;
-  };
-
   return (
     <div id="approach" className="wrapper approach-wrapper">
-      {renderContent()}
+      <Img src={MEDAFLogo} alt="medaf logo" />
+      {ApproachData.map((card) => (
+        <ApproachCard key={card.id} cardId={card.id + 1} card={card} />
+      ))}
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Progress from './Progress';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
-import logo from '../../../assets/images/medaf-typeface.png';
+import logo from '../../../assets/images/medaf-typeface-white.png';
 import '../../../assets/styles/components/splash-screen.scss';
 import SplashScreenData from '../../../assets/data/splachscreen.js';
+
 const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function SplashScreen({ value, totalTime }) {
@@ -13,11 +14,11 @@ export default function SplashScreen({ value, totalTime }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
-    setCurrentSlideIndex((value / 100) * 4);
+    setCurrentSlideIndex((value / 100) * SplashScreenData.length);
   }, [value]);
   const renderText = () => {
     if (currentSlideIndex > SplashScreenData.length - 1) return;
-    return SplashScreenData[currentSlideIndex].text;
+    return SplashScreenData[currentSlideIndex].text[0];
   };
 
   const animateImages = () => {
@@ -38,12 +39,58 @@ export default function SplashScreen({ value, totalTime }) {
   return (
     <div className="splash-screen-wrapper">
       <Img src={logo} alt={'medaf logo'} />
-      <div
-        id="splachscreen-image"
-        className="splash-screen-wrapper__image"
-      ></div>
+      <div className="splash-screen-wrapper__test">
+        <div
+          className={`splash-screen-wrapper__text ${
+            currentSlideIndex === 0
+              ? 'splash-screen-wrapper__text--show'
+              : 'splash-screen-wrapper__text--hide'
+          }`}
+        >
+          <div className="splash-screen-wrapper__text--right">
+            {SplashScreenData[0].text[0].split(' ').map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
+          <div className="splash-screen-wrapper__text--right">
+            {SplashScreenData[0].text[1].split(' ').map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
+        </div>
+        <div
+          id="splachscreen-image"
+          className="splash-screen-wrapper__image"
+        ></div>
+        <div
+          className={`splash-screen-wrapper__text ${
+            currentSlideIndex === 0
+              ? 'splash-screen-wrapper__text--show'
+              : 'splash-screen-wrapper__text--hide'
+          }`}
+        >
+          <div className="splash-screen-wrapper__text--left">
+            {SplashScreenData[0].text[2].split(' ').map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
+          <div className="splash-screen-wrapper__text--left">
+            {SplashScreenData[0].text[3].split(' ').map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+      <p
+        className={`${
+          currentSlideIndex === 0
+            ? 'splash-screen-wrapper__text--hide'
+            : 'splash-screen-wrapper__text--show'
+        }`}
+      >
+        {renderText()}
+      </p>
       <Progress value={value} />
-      <p>{renderText()}</p>
     </div>
   );
 }

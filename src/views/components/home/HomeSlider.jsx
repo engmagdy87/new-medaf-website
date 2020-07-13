@@ -13,6 +13,7 @@ export default function HomeSlider() {
       <CustomCarousel
         activeSlideId={activeSlideId}
         setActiveSlideId={setActiveSlideId}
+        isAutoPlayEnabled={null}
       >
         {HomeData.map((slide) => (
           <Carousel.Item key={slide.id}>

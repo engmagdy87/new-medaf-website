@@ -258,9 +258,11 @@
       padding-left: 50px;
       display: flex;
       @include is-mobile {
+        top: 10%;
         margin-top: 0px;
         width: 90%;
         padding: 0 5%;
+        height: 100%;
       }
       img {
         width: 50%;
@@ -296,7 +298,8 @@
           font-family: 'Suisse Light';
           font-size: 1.2rem;
           @include is-mobile {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
           }
         }
         div {
@@ -307,6 +310,10 @@
           font-size: 1.2rem;
           @media (max-height: 680px) and (min-width: 1200px) {
             height: 25%;
+          }
+          @include is-mobile {
+            height: 70%;
+            font-size: 1rem;
           }
           &::-webkit-scrollbar {
             width: 5px !important;
@@ -330,6 +337,10 @@
       font-size: 60px;
       cursor: pointer;
       z-index: 500;
+      @include is-mobile {
+        font-size: 50px;
+        top: 0;
+      }
     }
 
     @media screen and (max-height: 450px) {

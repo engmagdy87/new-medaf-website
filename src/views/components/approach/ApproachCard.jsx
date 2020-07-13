@@ -1,22 +1,32 @@
 import React from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
-const Img = React.lazy(() => import('../../shared/Img'));
+import '../../../assets/styles/components/approach/card.scss';
 
-export default function ApproachCard({ card, totalCards = 1 }) {
+export default function ApproachCard({ card, cardId }) {
+  const imageSrc = isDeviceSmart() ? card.image.mobile : card.image.desktop;
   return (
     <div
-      className="approach-slide-wrapper__card"
-      style={{ width: `calc(100%/${totalCards} - 1%)` }}
+      className="approach-card-wrapper"
+      style={{
+        backgroundImage: `url(${imageSrc})`,
+      }}
     >
-      {isDeviceSmart() ? (
-        <Img src={card.image.mobile} alt={card.title} />
-      ) : null}
-
-      {!isDeviceSmart() ? (
-        <Img src={card.image.desktop} alt={card.title} />
-      ) : null}
-      <h1>{card.title}</h1>
-      <div>{card.body}</div>
+      <div
+        className={`approach-card-wrapper__content ${
+          cardId % 2 === 0
+            ? 'approach-card-wrapper__content--right'
+            : 'approach-card-wrapper__content--left'
+        }`}
+      >
+        <h1>{card.title}</h1>
+        <p
+          style={{
+            marginLeft: cardId % 2 === 0 ? 'auto' : '',
+          }}
+        >
+          {card.body}
+        </p>
+      </div>
     </div>
   );
 }

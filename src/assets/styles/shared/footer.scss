@@ -4,11 +4,13 @@
 .footer-wrapper {
   width: 100%;
   height: $footer-height;
-  color: white;
+  color: black;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Suisse Regular';
+  font-size: 0.8rem;
   @include is-mobile {
     height: $footer-height-mobile;
     text-align: center;

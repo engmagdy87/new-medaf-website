@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: black !important;
+  background-color: white !important;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -46,15 +46,7 @@
       width: 150px;
       margin-left: 10px;
     }
-    img:nth-child(1) {
-      width: 90px;
-      margin-right: 20px;
-      @include is-mobile {
-        margin-right: 10px;
-        width: 40px;
-      }
-    }
-    img:nth-child(2) {
+    img {
       display: block;
       width: 150px;
       margin-right: 20px;
@@ -81,10 +73,10 @@
       a {
         padding: 20px 10px;
         transition: all 0.3s ease 0s;
-        color: white;
-        font-size: 1.05rem;
+        color: black;
+        font-size: 1.2rem;
         font-weight: bold;
-        font-family: 'Suisse SemiBold';
+        font-family: 'Suisse Regular';
       }
       &:hover {
         a {
@@ -94,6 +86,7 @@
     }
     &--active a {
       color: $primary !important;
+      text-decoration: underline;
     }
   }
 }

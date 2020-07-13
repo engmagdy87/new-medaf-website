@@ -1,6 +1,6 @@
 import React from 'react';
-import logoIcon from '../../assets/images/medaf-icon.png';
-import logoTypeface from '../../assets/images/medaf-typeface.png';
+import logoTypeface from '../../assets/images/medaf-typeface-red.png';
+import LinkedinIcon from '../../assets/images/Linkedin.jpg';
 import '../../assets/styles/shared/header.scss';
 
 export default function Header({ activeItem }) {
@@ -27,7 +27,7 @@ export default function Header({ activeItem }) {
             activeItem === 'about' ? 'header-wrapper__navLinks--active' : ''
           }
         >
-          <a href="#about">About Medaf</a>
+          <a href="#about">Who We Are</a>
         </li>
         <li
           className={
@@ -41,7 +41,7 @@ export default function Header({ activeItem }) {
             activeItem === 'team' ? 'header-wrapper__navLinks--active' : ''
           }
         >
-          <a href="#team">Team</a>
+          <a href="#team">Our People</a>
         </li>
         <li
           className={
@@ -55,7 +55,7 @@ export default function Header({ activeItem }) {
             activeItem === 'news' ? 'header-wrapper__navLinks--active' : ''
           }
         >
-          <a href="#news">News & Events</a>
+          <a href="#news">Media</a>
         </li>
         <li
           className={
@@ -63,6 +63,11 @@ export default function Header({ activeItem }) {
           }
         >
           <a href="#contact">Contact Us</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com" target="__blank">
+            <img src={LinkedinIcon} alt="Linkedin" />
+          </a>
         </li>
       </ul>
     </nav>
@@ -90,7 +95,7 @@ export default function Header({ activeItem }) {
             }
           >
             <a href="#about" onClick={closeNav}>
-              About Medaf
+              Who We Are
             </a>
           </li>
           <li
@@ -110,7 +115,7 @@ export default function Header({ activeItem }) {
             }
           >
             <a href="#team" onClick={closeNav}>
-              Team
+              Our People
             </a>
           </li>
           <li
@@ -130,7 +135,7 @@ export default function Header({ activeItem }) {
             }
           >
             <a href="#news" onClick={closeNav}>
-              News & Events
+              Media
             </a>
           </li>
           <li
@@ -140,6 +145,11 @@ export default function Header({ activeItem }) {
           >
             <a href="#contact" onClick={closeNav}>
               Contact Us
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" target="__blank">
+              <img src={LinkedinIcon} alt="Linkedin" />
             </a>
           </li>
         </div>
@@ -154,7 +164,6 @@ export default function Header({ activeItem }) {
   return (
     <header className="header-wrapper">
       <div className="header-wrapper__logo">
-        <img src={logoIcon} alt="medaf icon" />
         <img src={logoTypeface} alt="medaf typeface" />
       </div>
       {renderDesktopHeader()}

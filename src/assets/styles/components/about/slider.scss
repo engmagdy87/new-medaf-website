@@ -2,31 +2,4 @@
 
 .about-slider-wrapper {
   position: relative;
-  .carousel.slide {
-    .carousel-indicators {
-      left: 0 !important;
-      bottom: 0px !important;
-    }
-  }
-  @media (max-height: 680px) and (min-width: 1200px) {
-    .carousel.slide {
-      .carousel-indicators {
-        left: 0 !important;
-        bottom: -60px !important;
-      }
-    }
-  }
-  &__arrow {
-    height: 60px;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    cursor: pointer;
-    @include is-mobile {
-      display: none;
-    }
-    @include is-tablet {
-      display: none;
-    }
-  }
 }

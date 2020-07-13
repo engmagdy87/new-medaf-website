@@ -13,13 +13,7 @@ export default function HomeSlide({ content }) {
         backgroundImage: `url(${imageSrc})`,
       }}
     >
-      <h1>{content.body}</h1>
-      {content.actions.map((action, index) => (
-        <div key={index}>
-          <a href={action.url}>{action.text}</a>
-          <br />
-        </div>
-      ))}
+      {content.body}
     </div>
   );
 }

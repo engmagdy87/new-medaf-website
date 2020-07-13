@@ -40,6 +40,12 @@ function App() {
   };
 
   const renderContent = () => {
+    return (
+      <SplashScreen
+        value={spinnerValue}
+        totalTime={maximumValue * speedFactor}
+      />
+    );
     if (isLoading)
       return (
         <SplashScreen

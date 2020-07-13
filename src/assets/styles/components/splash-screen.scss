@@ -19,6 +19,12 @@
     display: inline-block;
     height: 400px;
     width: 18%;
+    @include is-mobile {
+      height: 45vh;
+    }
+    @media (max-height: 680px) and (min-width: 1200px) {
+      height: 250px;
+    }
     div {
       height: 50%;
       > p {
@@ -56,8 +62,11 @@
   img {
     width: 250px;
     display: block;
-    margin: 50px auto 50px auto;
+    margin: 50px auto;
     padding: 2%;
+    @media (max-height: 680px) and (min-width: 1200px) {
+      margin: 10px auto;
+    }
   }
   &__image {
     display: inline-block;

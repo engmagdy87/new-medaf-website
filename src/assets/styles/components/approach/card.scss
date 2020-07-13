@@ -7,13 +7,12 @@
   background-position: right;
   background-repeat: no-repeat;
   background-size: 150%;
-  @include is-mobile {
-    height: 75vh;
-    width: 90% !important;
-    padding-top: 30px;
-  }
+  height: calc(50vh - #{$header-height}/ 2);
   &__content {
     padding: 80px;
+    @media (max-height: 680px) and (min-width: 1200px) {
+      padding: 30px 80px;
+    }
     &--left {
       text-align: left;
     }
@@ -30,7 +29,7 @@
         margin: 15px 0 !important;
       }
       @media (max-height: 680px) and (min-width: 1200px) {
-        margin: 10px 0 !important;
+        margin-bottom: 10px !important;
       }
     }
     p {
@@ -42,6 +41,7 @@
         font-size: 1rem;
       }
       @media (max-height: 680px) and (min-width: 1200px) {
+        font-size: 1rem;
         height: 25%;
       }
     }

@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../../../assets/styles/components/business/card.scss';
-const BusinessMemberCard = React.lazy(() => import('./BusinessMemberCard'));
-const CardDetails = React.lazy(() => import('./CardDetails'));
+import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 
 export default function BusinessSlide({ slide }) {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedMember, setSelectedMember] = useState(null);
-  const showCardDetails = (member) => {
-    setSelectedMember(member);
-    setShowModal(true);
-  };
+  const imageSrc = isDeviceSmart() ? slide.image.mobile : slide.image.desktop;
   return (
     <div className="business-card-wrapper">
-      <BusinessMemberCard member={slide} showCardDetails={showCardDetails} />
-      <CardDetails
-        card={selectedMember}
-        showModal={showModal}
-        setShowModal={setShowModal}
-      />
+      <div
+        className="business-card-wrapper__member-card"
+        style={{
+          background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(${imageSrc})`,
+        }}
+      >
+        <h2>{slide.title}</h2>
+        {slide.actions.map((action, index) => (
+          <a key={index} href={`#${slide.title}`}>
+            {action.text}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

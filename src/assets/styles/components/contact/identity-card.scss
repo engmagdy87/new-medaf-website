@@ -1,7 +1,7 @@
 @import '../../mixins.scss';
 
 .identity-card-wrapper {
-  border-top: 1px solid white;
+  border-top: 1px solid black;
   width: 90%;
   margin-bottom: 20px;
   @include is-mobile {
@@ -20,11 +20,11 @@
     section {
       display: block;
       p {
-        color: gray;
+        color: black;
         font-family: 'Suisse Regular';
       }
       h5 {
-        color: rgba($color: #fff, $alpha: 0.8);
+        color: rgba($color: #000, $alpha: 0.8);
         font-size: 1rem;
         font-family: 'Suisse Light';
       }

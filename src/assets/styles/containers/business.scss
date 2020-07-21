@@ -3,7 +3,7 @@
 
 .business-wrapper {
   padding-top: $header-height;
-  height: 100%;
+  height: fit-content;
   position: relative;
   @include is-mobile {
     padding-top: $header-height-mobile;

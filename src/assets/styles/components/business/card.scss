@@ -25,6 +25,7 @@
       text-transform: uppercase;
       @media (max-height: 680px) and (min-width: 1200px) {
         font-size: 2rem;
+        line-height: 1;
       }
     }
     a {

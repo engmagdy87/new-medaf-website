@@ -14,7 +14,7 @@ export default function BusinessSlide({ slide }) {
       >
         <h2>{slide.title}</h2>
         {slide.actions.map((action, index) => (
-          <a key={index} href={`#${slide.title}`}>
+          <a key={index} href={`#${slide.id}`}>
             {action.text}
           </a>
         ))}

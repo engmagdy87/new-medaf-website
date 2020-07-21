@@ -20,7 +20,7 @@ export default function Business() {
     <div id="business" className="wrapper business-wrapper">
       <BusinessCards />
       {BusinessData.map((slide, index) => (
-        <div id={slide.title} key={index}>
+        <div id={`${slide.id}`} key={index}>
           <CardDetails card={slide} />
         </div>
       ))}

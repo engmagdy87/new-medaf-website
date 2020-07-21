@@ -36,6 +36,9 @@
   div[role='button']:nth-child(8) {
     grid-area: 2 / 4 / 3 / 4;
   }
+  @media (max-height: 680px) and (min-width: 1200px) {
+    height: 82vh;
+  }
 }
 
 .business-cards-wrapper-mobile {

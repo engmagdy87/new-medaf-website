@@ -1,27 +1,19 @@
 import React from 'react';
 import TeamData from '../../assets/data/team.js';
 import '../../assets/styles/containers/team.scss';
-import isDeviceSmart from '../../helpers/DetectIsDeviceSmart.js';
-const TeamSlider = React.lazy(() => import('../components/team/TeamSlider'));
-const GroupSlider = React.lazy(() => import('../components/team/GroupSlider'));
+const TeamHero = React.lazy(() => import('../components/team/TeamHero'));
+const TeamMembers = React.lazy(() => import('../components/team/TeamMembers'));
 
 export default function Team() {
-  const renderContent = () => {
-    if (isDeviceSmart())
-      return Object.keys(TeamData).map((groupId) => (
-        <GroupSlider
-          key={groupId}
-          groupData={TeamData[groupId]}
-          groupId={groupId}
-        />
-      ));
-
-    return <TeamSlider />;
-  };
-
   return (
     <div id="team" className="wrapper team-wrapper">
-      {renderContent()}
+      <TeamHero />
+      <div id="team-member-1">
+        <TeamMembers members={TeamData.slice(0, 2)} targetId="team-member-2" />
+      </div>
+      <div id="team-member-2">
+        <TeamMembers members={TeamData.slice(2)} />
+      </div>
     </div>
   );
 }

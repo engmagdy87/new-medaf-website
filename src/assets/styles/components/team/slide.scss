@@ -3,231 +3,59 @@
 @import '../../mixins.scss';
 
 .team-slide-wrapper {
-  width: 92%;
-  height: 65vh;
-  margin: auto;
-  @media (max-height: 680px) and (min-width: 1200px) {
-    overflow-y: auto;
-  }
-  &__cards {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include is-mobile {
-      display: block;
-      height: 70vh;
-      overflow-y: auto;
-    }
-    @media (max-height: 680px) and (min-width: 1200px) {
-      margin-top: 0;
-    }
-  }
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    margin-top: 50px;
-    div[role='button']:nth-child(1) {
-      grid-area: 1 / 1 / 2 / 2;
-    }
-    div[role='button']:nth-child(2) {
-      grid-area: 1 / 2 / 2 / 3;
-    }
-    div[role='button']:nth-child(3) {
-      grid-area: 1 / 3 / 2 / 4;
-    }
-    div[role='button']:nth-child(4) {
-      grid-area: 1 / 4 / 2 / 5;
-    }
-    div[role='button']:nth-child(5) {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-    div[role='button']:nth-child(6) {
-      grid-area: 2 / 2 / 3 / 3;
-    }
-    div[role='button']:nth-child(7) {
-      grid-area: 2 / 3 / 3 / 4;
-    }
-    div[role='button']:nth-child(8) {
-      grid-area: 2 / 4 / 3 / 4;
-    }
-  }
-  &__board-card {
-    display: block;
-    height: 50vh;
-    margin: auto;
-    @include is-mobile {
-      height: 80vh;
-      width: 90% !important;
-      margin: 20px auto;
-    }
-    @media (max-height: 680px) and (min-width: 1200px) {
-      height: 50vh;
-    }
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 50%;
-      margin-bottom: 20px;
-      @include is-mobile {
-        height: 65%;
-      }
-      @media (max-height: 680px) and (min-width: 1200px) {
-        height: 70%;
-        margin-bottom: 10px;
-      }
-    }
+  height: calc(100vh - #{$header-height} - #{$footer-height});
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: $footer-height;
+  &__text {
     h1 {
-      font-size: 2rem;
-      font-family: 'Suisse Book';
+      padding: 15% 20% 0 20%;
+      font-size: 2.5rem;
+      line-height: 50px;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: 'Suisse Regular';
       @include is-mobile {
+        margin-bottom: 30px;
+        line-height: 35px;
+        font-size: 1.4rem;
+        width: 80%;
+        text-align: left;
+      }
+      @media (max-height: 680px) {
+        width: 80%;
+        padding-top: 2%;
         font-size: 1.5rem;
-        margin-bottom: 0 !important;
+        line-height: 40px;
       }
       @media (max-height: 680px) and (min-width: 1200px) {
-        font-size: 1.3rem;
-      }
-    }
-    h2 {
-      font-size: 1.2rem;
-      font-family: 'Suisse Light';
-      font-weight: lighter;
-      @include is-mobile {
-        font-size: 1rem;
-        margin-bottom: 20px !important;
-      }
-      @media (max-height: 680px) and (min-width: 1200px) {
-        font-size: 0.8rem;
-      }
-    }
-    div {
-      overflow-y: auto;
-      height: 30%;
-      @include is-mobile {
-        height: 0;
-      }
-      @media (max-height: 680px) and (min-width: 1200px) {
-        height: 20%;
-      }
-      &::-webkit-scrollbar {
-        width: 5px !important;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: $primary !important;
-        border-radius: 20px !important;
-      }
-      &::-webkit-scrollbar {
-        background-color: rgba($color: #fff, $alpha: 0.8) !important;
-        border-radius: 20px !important;
-      }
-    }
-    div p {
-      font-size: 1.2rem;
-      font-family: 'Suisse Light';
-      font-weight: lighter;
-      @include is-mobile {
-        display: none;
-      }
-      @include is-large-desktop {
-        font-size: 1rem;
-      }
-      @include is-extra-large-desktop {
-        font-size: 0.95rem;
-      }
-      @media (max-height: 680px) and (min-width: 1200px) {
-        font-size: 0.95rem;
-      }
-    }
-    button {
-      background: transparent;
-      border: none;
-      color: white;
-      margin-top: 10px;
-      padding: 0;
-      text-decoration: underline;
-      font-family: 'Suisse Book';
-      letter-spacing: 3px;
-      cursor: pointer;
-      @media (max-height: 680px) and (min-width: 1200px) {
-        font-size: 0.8rem;
+        font-size: 1.6rem;
+        padding-top: 6%;
+        line-height: 35px;
+        width: 55%;
       }
     }
   }
-  &__member-card {
-    display: block;
-    margin: auto;
-    position: relative;
-    @include is-mobile {
-      height: 75vh;
-      width: 90% !important;
-      margin: 20px auto;
-    }
-
-    img {
-      display: none;
-      @include is-mobile {
-        display: block;
-        object-fit: cover;
-        width: 100%;
-        height: 80%;
-        margin-bottom: 20px;
-      }
-    }
-    &__content {
-      position: relative;
-      img {
-        object-fit: cover;
-        width: 100%;
-        display: block;
-        @include is-mobile {
-          display: none;
-        }
-      }
-      section {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding-left: 8%;
-        padding-bottom: 2%;
-        @include is-mobile {
-          position: relative;
-        }
-        h1 {
-          font-size: 1.7rem;
-          font-family: 'Suisse Book';
-          margin-bottom: 0;
-        }
-        h2 {
-          font-size: 1rem;
-          font-family: 'Suisse Light';
-          font-weight: lighter;
-          margin-top: 0;
-        }
-      }
+  &__read-more {
+    font-family: 'Suisse Book';
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
     }
   }
   &__arrow {
     height: 60px;
-    position: absolute;
-    bottom: -40px;
-    right: 5%;
-    z-index: 1000;
     cursor: pointer;
-    @media (max-height: 680px) and (min-width: 1200px) {
-      bottom: 0;
-    }
-    &--right-dir {
-      transform: rotate(0);
-      right: 5%;
-      left: unset;
-    }
-    &--left-dir {
-      transform: rotate(180deg);
-      right: unset;
-      left: 5%;
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      height: 60px;
+      transform: rotate(90deg);
     }
     @include is-mobile {
       display: none !important;
@@ -354,6 +182,95 @@
         top: 15px;
         right: 35px;
         z-index: 500;
+      }
+    }
+  }
+  &__team-members-wrapper {
+    height: 100vh;
+    padding-top: $header-height;
+    position: relative;
+    &__Img {
+      width: 100%;
+      height: 100%;
+    }
+    &__members {
+      position: absolute;
+      top: $header-height;
+      display: flex;
+      background: linear-gradient(
+        to bottom,
+        rgba(246, 246, 246, 0.8) 60%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      height: 100%;
+      &__arrow {
+        position: absolute;
+        display: block;
+        bottom: 80px;
+        cursor: pointer;
+        width: 300px;
+        transform: translateX(50vw);
+        left: -150px;
+        &__Img {
+          height: 60px;
+          transform: rotate(-90deg);
+          display: block;
+          margin: auto;
+        }
+        @include is-mobile {
+          display: none !important;
+        }
+        @include is-tablet {
+          display: none !important;
+        }
+      }
+      &__read-more {
+        text-align: center;
+        text-decoration: underline;
+        font-family: 'Suisse Book';
+        color: black;
+        &:hover,
+        &:active,
+        &:focus {
+          color: black;
+        }
+      }
+    }
+    &__member {
+      width: 50%;
+      padding: 4%;
+      color: black;
+      display: flex;
+      &__first-section {
+        width: 40%;
+        margin-right: 10%;
+        img {
+          width: 100%;
+        }
+        h3 {
+          font-family: 'Jar Binks Regular';
+          font-size: 3rem;
+          text-align: center;
+        }
+      }
+      &__second-section {
+        width: 60%;
+        h1 {
+          font-family: 'Gothic Medium';
+          text-transform: uppercase;
+          font-size: 3rem;
+        }
+        h2 {
+          font-family: 'Gothic Regular';
+          text-transform: uppercase;
+          font-size: 2.5rem;
+          width: 95%;
+        }
+        div p {
+          font-family: 'Suisse Regular';
+          font-size: 1rem;
+          text-align: justify;
+        }
       }
     }
   }

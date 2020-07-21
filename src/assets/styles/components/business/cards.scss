@@ -2,8 +2,9 @@
 
 .business-cards-wrapper {
   position: relative;
-  height: 96%;
+  height: 100%;
   width: 98%;
+  padding-bottom: 2%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

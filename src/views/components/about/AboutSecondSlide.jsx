@@ -29,8 +29,8 @@ export default function AboutSlide({ firstSection, secondSection }) {
         }}
       >
         <h1>{secondSection.title}</h1>
-        {secondSection.body.map((item) => (
-          <div>
+        {secondSection.body.map((item, index) => (
+          <div key={index}>
             <p className="about-slide-wrapper__section__second-content-title">
               {item.value}
             </p>

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useEffect } from 'react';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import MedafLogo from '../../../assets/images/medaf-icon-white.png';
 const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function CardDetails({ card, showModal, setShowModal }) {
@@ -20,8 +21,10 @@ export default function CardDetails({ card, showModal, setShowModal }) {
     if (document.getElementById('arrow') !== null)
       document.getElementById('arrow').style.display = 'block';
   };
+
   const renderContent = () => {
     if (card === null) return null;
+    const imageSrc = isDeviceSmart() ? card.image.mobile : card.image.desktop;
     return (
       <div className="business-card-wrapper__modal">
         <div
@@ -36,15 +39,23 @@ export default function CardDetails({ card, showModal, setShowModal }) {
           </a>
 
           <div className="business-card-wrapper__modal__content">
-            <Img
-              src={isDeviceSmart() ? card.image.mobile : card.image.desktop}
-              alt={card.completeTitle}
+            <img
+              className="business-card-wrapper__modal__content__hq-image"
+              src={imageSrc}
+              alt={card.title}
             />
-            <section>
-              <h1>{card.completeTitle}</h1>
-              <div>{card.description}</div>
-              <a href={card.website.url}>{card.website.text}</a>
-            </section>
+            <img
+              className="business-card-wrapper__modal__content__logo"
+              src={MedafLogo}
+              alt="medaf logo"
+            />
+            <div className="business-card-wrapper__modal__content__section">
+              <div>{card.completeTitle}</div>
+              <div className="business-card-wrapper__modal__content__section__details">
+                <div>{card.description}</div>
+                <a href={card.website.url}>{card.website.text}</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

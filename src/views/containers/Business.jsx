@@ -9,14 +9,14 @@ const GroupSlider = React.lazy(() =>
 );
 
 export default function Business() {
-  const renderContent = () => {
-    if (isDeviceSmart()) return <GroupSlider />;
-    return <BusinessCards />;
-  };
+  // const renderContent = () => {
+  //   if (isDeviceSmart()) return <GroupSlider />;
+  //   return <BusinessCards />;
+  // };
 
   return (
     <div id="business" className="wrapper business-wrapper">
-      {renderContent()}
+      <BusinessCards />
     </div>
   );
 }

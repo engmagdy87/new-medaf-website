@@ -16,6 +16,9 @@
       height: auto;
       object-fit: cover !important;
       object-position: top;
+      @media (max-height: 680px) and (min-width: 1200px) {
+        object-position: center;
+      }
     }
   }
   .identity-card-content {
@@ -33,22 +36,24 @@
       text-transform: uppercase;
       padding-left: 0;
       font-family: 'Gothic Medium';
+      @media (max-height: 680px) and (min-width: 1200px) {
+        margin-bottom: 0px;
+      }
     }
     div {
-      display: flex;
-      justify-content: flex-end;
-      section {
-        display: block;
-        width: 70%;
-        h5 {
-          color: rgba($color: #000, $alpha: 0.8);
-          font-size: 0.65rem;
-          font-family: 'Suisse Light';
-        }
-        span {
-          color: rgba($color: #000, $alpha: 0.8);
-          font-family: 'Suisse Light';
-          font-size: 0.65rem;
+      display: inline-block;
+      width: 70%;
+      @media (max-height: 680px) and (min-width: 1200px) {
+        width: 100%;
+      }
+      p,
+      span {
+        color: rgba($color: #000, $alpha: 0.8);
+        font-size: 0.65rem;
+        font-family: 'Suisse Light';
+        margin-bottom: 0;
+        @media (max-height: 680px) and (min-width: 1200px) {
+          font-size: 0.6rem;
         }
       }
     }

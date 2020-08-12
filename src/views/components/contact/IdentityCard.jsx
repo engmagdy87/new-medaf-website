@@ -17,12 +17,10 @@ export default function IdentityCard({ idCardData }) {
           <div className="identity-card-content">
             <h1>{idCardData.title}</h1>
             <div>
-              <section>
-                <h5>{idCardData.address}</h5>
-                {idCardData.telephones.map((telNumber, index) => (
-                  <span key={index}>{telNumber}</span>
-                ))}
-              </section>
+              <p>{idCardData.address}</p>
+              {idCardData.telephones.map((telNumber, index) => (
+                <span key={index}>{telNumber}</span>
+              ))}
             </div>
           </div>
         </Col>

@@ -5,6 +5,9 @@
   padding-top: $header-height;
   height: 90%;
   position: relative;
+  @media (max-height: 680px) and (min-width: 1200px) {
+    height: 79vh;
+  }
   h1 {
     margin-left: 3%;
     font-size: 1.2rem;

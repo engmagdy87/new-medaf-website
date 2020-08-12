@@ -52,10 +52,10 @@ export default function Header({ activeItem }) {
         </li>
         <li
           className={
-            activeItem === 'news' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === 'media' ? 'header-wrapper__navLinks--active' : ''
           }
         >
-          <a href="#news">Media</a>
+          <a href="#media">Media</a>
         </li>
         <li
           className={
@@ -134,7 +134,7 @@ export default function Header({ activeItem }) {
               activeItem === 'news' ? 'header-wrapper__navLinks--active' : ''
             }
           >
-            <a href="#news" onClick={closeNav}>
+            <a href="#media" onClick={closeNav}>
               Media
             </a>
           </li>

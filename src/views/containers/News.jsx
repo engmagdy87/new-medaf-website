@@ -11,8 +11,8 @@ export default function News() {
   };
 
   return (
-    <div id="news" className="wrapper news-wrapper">
-      <h1>LATEST NEWS</h1>
+    <div id="media" className="wrapper news-wrapper">
+      {/* <h1>LATEST NEWS</h1> */}
       {renderContent()}
     </div>
   );

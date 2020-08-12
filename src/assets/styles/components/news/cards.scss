@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   align-items: center;
   width: 94%;
-  height: 70vh;
+  height: 80vh;
   margin: auto;
   overflow-y: auto;
   &::-webkit-scrollbar {
@@ -20,9 +20,6 @@
   &::-webkit-scrollbar {
     background-color: rgba($color: #fff, $alpha: 0.8) !important;
     border-radius: 20px !important;
-  }
-  @media (max-height: 680px) and (min-width: 1200px) {
-    height: 79vh;
   }
 }
 

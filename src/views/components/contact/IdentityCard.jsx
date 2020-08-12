@@ -1,22 +1,32 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 import '../../../assets/styles/components/contact/identity-card.scss';
 
 export default function IdentityCard({ idCardData }) {
+  const imageSrc = isDeviceSmart()
+    ? idCardData.image.mobile
+    : idCardData.image.desktop;
   return (
-    <div className="identity-card-wrapper">
-      <h1>{idCardData.title}</h1>
-      <div>
-        <section>
-          <p>Find us</p>
-          <h5>{idCardData.address}</h5>
-        </section>
-        <section>
-          <p>Call us</p>
-          {idCardData.telephones.map((telNumber, index) => (
-            <h5 key={index}>{telNumber}</h5>
-          ))}
-        </section>
-      </div>
-    </div>
+    <Container className="identity-card-wrapper">
+      <Row>
+        <Col xs={12} sm={6} className="identity-card-wrapper__img">
+          <img src={imageSrc} alt={idCardData.title} />
+        </Col>
+        <Col xs={12} sm={6}>
+          <div className="identity-card-content">
+            <h1>{idCardData.title}</h1>
+            <div>
+              <section>
+                <h5>{idCardData.address}</h5>
+                {idCardData.telephones.map((telNumber, index) => (
+                  <span key={index}>{telNumber}</span>
+                ))}
+              </section>
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }

@@ -1,45 +1,53 @@
 @import '../../mixins.scss';
 
 .identity-card-wrapper {
-  border-top: 1px solid black;
-  width: 90%;
-  margin-bottom: 20px;
-  @include is-mobile {
-    margin-top: 10px;
+  margin: 5px 0;
+  height: 20%;
+  display: block;
+  .row {
+    height: 100% !important;
   }
-  h1 {
-    font-size: 1.2rem;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    padding-left: 0;
-    font-family: 'Suisse Book';
-  }
-  div {
-    display: flex;
-    section {
+  &__img {
+    max-height: 100% !important;
+    img {
+      max-height: 100% !important;
       display: block;
-      p {
-        color: black;
-        font-family: 'Suisse Regular';
-      }
-      h5 {
-        color: rgba($color: #000, $alpha: 0.8);
-        font-size: 1rem;
-        font-family: 'Suisse Light';
-      }
+      width: 100%;
+      height: auto;
+      object-fit: cover !important;
+      object-position: top;
     }
-    section:nth-child(1) {
-      width: 45%;
-      margin-right: 40px;
-      @include is-mobile {
-        width: 50%;
-      }
+  }
+  .identity-card-content {
+    border-top: 1px solid black;
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: right;
+    @include is-mobile {
+      margin-top: 10px;
     }
-    section:nth-child(2) {
-      width: 40%;
-      @include is-mobile {
-        width: 50%;
+    h1 {
+      font-size: 1.1rem;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      padding-left: 0;
+      font-family: 'Suisse Book';
+    }
+    div {
+      display: flex;
+      section {
+        display: block;
+        span {
+          color: black;
+          font-family: 'Suisse Light';
+          font-size: 0.8rem;
+        }
+        h5 {
+          color: rgba($color: #000, $alpha: 0.8);
+          font-size: 0.8rem;
+          font-family: 'Suisse Light';
+        }
       }
     }
   }

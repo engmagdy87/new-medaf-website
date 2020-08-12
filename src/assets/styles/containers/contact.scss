@@ -14,31 +14,33 @@
   }
   h1 {
     font-size: 1.2rem;
-    margin-top: 30px;
+    // margin-top: 30px;
     padding-left: 5%;
     font-family: 'Suisse Book';
+    color: black;
   }
   &__content {
     padding-left: 5%;
     margin-top: 50px;
     display: flex;
     height: 80%;
+    color: black;
     @include is-mobile {
       margin-top: 20px;
       display: block;
     }
     img {
-      width: 40%;
-      height: 90%;
+      width: 50%;
+      height: 82.5%;
       object-fit: cover;
-      margin-right: 5%;
+      // margin-right: 5%;
       @include is-mobile {
         width: 96%;
         margin: auto;
       }
     }
     &__address {
-      width: 35%;
+      width: 50%;
       display: block;
       @include is-mobile {
         width: 100%;

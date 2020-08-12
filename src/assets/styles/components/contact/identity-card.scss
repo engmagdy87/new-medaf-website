@@ -29,10 +29,10 @@
     h1 {
       font-size: 1.1rem;
       margin-top: 5px;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
       text-transform: uppercase;
       padding-left: 0;
-      font-family: 'Suisse Book';
+      font-family: 'Gothic Medium';
     }
     div {
       display: flex;
@@ -40,15 +40,15 @@
       section {
         display: block;
         width: 70%;
-        span {
-          color: black;
-          font-family: 'Suisse Light';
-          font-size: 0.7rem;
-        }
         h5 {
           color: rgba($color: #000, $alpha: 0.8);
-          font-size: 0.7rem;
+          font-size: 0.65rem;
           font-family: 'Suisse Light';
+        }
+        span {
+          color: rgba($color: #000, $alpha: 0.8);
+          font-family: 'Suisse Light';
+          font-size: 0.65rem;
         }
       }
     }

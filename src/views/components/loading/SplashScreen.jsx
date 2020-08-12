@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CrossfadeImage from 'react-crossfade-image';
 import Progress from './Progress';
 import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
 import logo from '../../../assets/images/medaf-typeface-white.png';
@@ -7,33 +8,30 @@ import SplashScreenData from '../../../assets/data/splachscreen.js';
 
 const Img = React.lazy(() => import('../../shared/Img'));
 
-export default function SplashScreen({ value, totalTime }) {
+export default function SplashScreen({ value, step, totalTime }) {
+  let imageSrc = null;
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  if (isDeviceSmart()) imageSrc = SplashScreenData[0].image.mobile;
+  else imageSrc = SplashScreenData[0].image.desktop;
+
+  const [targetImage, setTargetImage] = useState(imageSrc);
+
   useEffect(() => {
-    animateImages();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    if (currentSlideIndex <= SplashScreenData.length - 1) {
+      let srcImage = null;
+      if (isDeviceSmart())
+        srcImage = SplashScreenData[currentSlideIndex].image.mobile;
+      else srcImage = SplashScreenData[currentSlideIndex].image.desktop;
+      setTargetImage(srcImage);
+    }
+  }, [currentSlideIndex]);
   useEffect(() => {
     setCurrentSlideIndex((value / 100) * SplashScreenData.length);
   }, [value]);
+
   const renderText = () => {
     if (currentSlideIndex > SplashScreenData.length - 1) return;
     return SplashScreenData[currentSlideIndex].text[0];
-  };
-
-  const animateImages = () => {
-    const imageContainer = document.getElementById('splachscreen-image');
-    var keyFrames = SplashScreenData.map((slideObject) => {
-      let imageSrc = null;
-      if (isDeviceSmart()) imageSrc = `url(${slideObject.image.mobile})`;
-      else imageSrc = `url(${slideObject.image.desktop})`;
-      return { backgroundImage: imageSrc };
-    });
-
-    var timing = {
-      duration: totalTime,
-    };
-    imageContainer.animate(keyFrames, timing);
   };
 
   return (
@@ -58,10 +56,15 @@ export default function SplashScreen({ value, totalTime }) {
             ))}
           </div>
         </div>
-        <div
+        {/* <div
           id="splachscreen-image"
           className="splash-screen-wrapper__image"
-        ></div>
+        ></div> */}
+        <CrossfadeImage
+          src={targetImage}
+          containerClass="splash-screen-wrapper__image"
+          duration={500}
+        />
         <div
           className={`splash-screen-wrapper__text ${
             currentSlideIndex === 0

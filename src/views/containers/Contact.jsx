@@ -19,12 +19,12 @@ export default function News() {
   return (
     <div id="contact" className="wrapper contact-wrapper">
       <h1>FIND US HERE</h1>
-      <section className="contact-wrapper__content">
+      <div className="contact-wrapper__content">
         <Img src={imageSrc} alt="map" />
         <div className="contact-wrapper__content__address">
           {ContactData.map(renderContent)}
         </div>
-      </section>
+      </div>
       <Footer />
     </div>
   );

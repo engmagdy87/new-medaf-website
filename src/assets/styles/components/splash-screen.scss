@@ -71,12 +71,11 @@
   &__image {
     display: inline-block;
     width: 30%;
-    max-width: 400px;
+    max-width: 400px !important;
     height: 400px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 25px;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     @include is-mobile {
       width: 90%;
       height: 45vh;
@@ -86,6 +85,14 @@
       width: 30%;
       max-width: 250px;
       height: 250px;
+    }
+    img {
+      height: 400px !important;
+      // max-width: 100% !important;
+      width: 100% !important;
+      // max-width: max-content !important;
+      // height: 100% !important;
+      margin: 0 0 25px 0 !important;
     }
   }
   > p {

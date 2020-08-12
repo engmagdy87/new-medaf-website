@@ -2,7 +2,6 @@
 @import '../mixins.scss';
 
 .contact-wrapper {
-  display: grid;
   position: relative;
   padding-top: $header-height;
   height: 90%;
@@ -23,7 +22,7 @@
     padding-left: 5%;
     margin-top: 50px;
     display: flex;
-    height: 80%;
+    height: 90%;
     color: black;
     @include is-mobile {
       margin-top: 20px;
@@ -31,7 +30,7 @@
     }
     img {
       width: 50%;
-      height: 82.5%;
+      height: 96%;
       object-fit: cover;
       // margin-right: 5%;
       @include is-mobile {

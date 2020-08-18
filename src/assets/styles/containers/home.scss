@@ -8,4 +8,23 @@
   @include is-mobile {
     padding-top: $header-height-mobile;
   }
+  &__arrow {
+    height: 60px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    transform: translateX(calc(50vw - 50%));
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      height: 60px;
+      transform: rotate(90deg);
+    }
+    @include is-mobile {
+      display: none !important;
+    }
+    @include is-tablet {
+      display: none !important;
+    }
+  }
 }

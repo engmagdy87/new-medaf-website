@@ -28,7 +28,9 @@ export default function AboutSlide({ content }) {
           <p>{content.person.name}</p>
           <p>{content.person.title}</p>
           <p>{content.person.signature}</p>
-          <p>{content.email}</p>
+          <p>
+            <a href={`mailto:${content.email}`}>{content.email}</a>
+          </p>
         </div>
       </div>
     </div>

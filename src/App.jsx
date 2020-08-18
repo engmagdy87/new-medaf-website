@@ -57,7 +57,7 @@ function App() {
           <Approach />
           <Team />
           <Business />
-          <News />
+          {/* <News /> */}
           <Contact />
         </div>
       );

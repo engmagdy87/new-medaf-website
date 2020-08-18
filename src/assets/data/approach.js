@@ -11,7 +11,7 @@ export default [
     {
         "id": 0,
         "title": 'SUSTAINING BALANCE',
-        "body": "Through our passionate group of profes- sionals, MEDAF’s projects aim to minimise our environmental footprint as an organisa- tion, a moral obligation towards a more sus- tainable planet.",
+        "body": "Through our passionate group of professionals, MEDAF’s projects aim to minimise our environmental footprint as an organisation, a moral obligation towards a more sustainable planet.",
         "image": {
             desktop: DesktopImage1,
             mobile: MobileImage1
@@ -20,7 +20,7 @@ export default [
     {
         "id": 1,
         "title": 'OPTIMISING POTENTIAL',
-        "body": "By seeing the opportunities for enhance- ment in our investments, MEDAF provides solutions that lead to responsible expansion & growth within or beyond borders, taking a business towards its optimum potential.",
+        "body": "By seeing the opportunities for enhancement in our investments, MEDAF provides solutions that lead to responsible expansion & growth within or beyond borders, taking a business towards its optimum potential.",
         "image": {
             desktop: DesktopImage2,
             mobile: MobileImage2
@@ -29,7 +29,7 @@ export default [
     {
         "id": 2,
         "title": 'TRANSFORMING MINDSETS',
-        "body": "By understanding the cultures of our regions, MEDAF is able to bring the transformative powers of learning & creativity to each of its business opportu- nities, creating shifts in communities’ perspectives.",
+        "body": "By understanding the cultures of our regions, MEDAF is able to bring the transformative powers of learning & creativity to each of its business opportunities, creating shifts in communities’ perspectives.",
         "image": {
             desktop: DesktopImage3,
             mobile: MobileImage3

@@ -18,7 +18,7 @@ const homeData = [
   },
   {
     "id": 1,
-    "body": (<h1 style={{ fontFamily: 'Suisse Light' }}><strong style={{ fontFamily: 'Suisse Regular' }}>Our Mission is to creatively integrate our</strong><br />group’s three core services; finance, business operations & technology, to cultivate fit for purpose solutions for clients. We optimise the unique value proposition of a client’s business & help them map out and lead a sustainable growth journey towards their goals.</h1>),
+    "body": (<h1 style={{ fontFamily: 'Suisse Light' }}><strong style={{ fontFamily: 'Suisse Regular' }}><span style={{ fontFamily: 'Gothic Medium', fontSize: '2.8rem' }}>OUR MISSION</span></strong> is to optimise the unique value proposition of our clients' businesses and help them map out a sustainable growth journey towards their goals. We are doing so by creatively combining our group's three areas of expertise; financial services, business operations and technology.</h1>),
     "image": {
       desktop: DesktopImage2,
       mobile: MobileImage2

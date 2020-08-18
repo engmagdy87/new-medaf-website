@@ -82,6 +82,9 @@ a {
   left: unset !important;
   bottom: 20px !important;
   .active {
-    background-color: $primary !important;
+    background-color: white !important;
+  }
+  li {
+    background-color: rgba($color: #fff, $alpha: 0.5) !important;
   }
 }

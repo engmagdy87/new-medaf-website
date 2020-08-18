@@ -24,9 +24,7 @@ export default function TeamHero() {
       </div>
       <a href="#team-member-1" className="team-slide-wrapper__arrow">
         <img id="arrow" src={Arrow} alt="arrow" />
-        <p className="team-slide-wrapper__read-more">
-          READ MORE ABOUT OUR FOUNDERS
-        </p>
+        <p className="team-slide-wrapper__read-more">ABOUT OUR FOUNDERS</p>
       </a>
     </div>
   );

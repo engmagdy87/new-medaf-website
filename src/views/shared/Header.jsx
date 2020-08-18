@@ -50,13 +50,13 @@ export default function Header({ activeItem }) {
         >
           <a href="#business">Our Business</a>
         </li>
-        <li
+        {/* <li
           className={
             activeItem === 'media' ? 'header-wrapper__navLinks--active' : ''
           }
         >
           <a href="#media">Media</a>
-        </li>
+        </li> */}
         <li
           className={
             activeItem === 'contact' ? 'header-wrapper__navLinks--active' : ''
@@ -129,7 +129,7 @@ export default function Header({ activeItem }) {
               Our Business
             </a>
           </li>
-          <li
+          {/* <li
             className={
               activeItem === 'news' ? 'header-wrapper__navLinks--active' : ''
             }
@@ -137,7 +137,7 @@ export default function Header({ activeItem }) {
             <a href="#media" onClick={closeNav}>
               Media
             </a>
-          </li>
+          </li> */}
           <li
             className={
               activeItem === 'contact' ? 'header-wrapper__navLinks--active' : ''

@@ -11,7 +11,7 @@ const MobileImage3 = require("../../assets/images/about/mobile/medaf-about-3.jpg
 const aboutData = {
     "MEDAF INVESTMENTS": {
         "title": (<div>MEDAF<br />INVESTMENTS.</div>),
-        "body": ["MEDAF Investments is a Kuwaiti-Egyptian business partnership, and is one of the fastest growing holding groups in the region. We provide a uniquely integrated service model, that combines finan- cial services, business operations & technology, across more than eight industries. Our primary focus is to grow from Egypt and es- tablish ourselves in Africa and the Middle East, with an outlook to expand into noted business hubs across the globe, such as Swit- zerland, the UK and China.", '“We are on the lookout for passionate investors, initiatives and pioneers to participate in the region’s uniquely promising mar- kets. We not only welcome, but invite enquiries and proposals from individuals and businesses in our communities.”'],
+        "body": ["MEDAF Investments is a Kuwaiti-Egyptian business partnership, and is one of the fastest growing holding groups in the region. We provide a uniquely integrated service model, that combines financial services, business operations & technology, across more than eight industries. Our primary focus is to grow from Egypt and establish ourselves in Africa and the Middle East, with an outlook to expand into noted business hubs across the globe, such as Switzerland, the UK and China.", '“We are on the lookout for passionate investors, initiatives and pioneers to participate in the region’s uniquely promising markets. We not only welcome, but invite enquiries and proposals from individuals and businesses in our communities.”'],
         "person": {
             "name": 'MR. MOHAB ZAKARIA,',
             'title': 'GLOBAL CEO, MEDAF',
@@ -32,7 +32,7 @@ const aboutData = {
         }
     },
     "VALUES": {
-        "title": 'VALUES',
+        "title": 'OUR VALUES',
         "body": [
             {
                 'value': 'INTEGRITY',

@@ -14,7 +14,7 @@ export default function AboutSlide({ firstSection, secondSection }) {
       <div
         className="about-slide-wrapper__section"
         style={{
-          backgroundImage: `url(${firstImageSrc})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(${firstImageSrc})`,
         }}
       >
         <h1>{firstSection.title}</h1>

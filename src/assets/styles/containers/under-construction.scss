@@ -1,0 +1,22 @@
+.under-construction-wrapper {
+  color: black;
+  height: 100vh;
+  text-align: center;
+  background-color: #fad201;
+  padding-top: 35vh;
+  img {
+    display: block;
+    height: 20vh;
+    width: 100%;
+  }
+  h1 {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-decoration: underline;
+    font-family: 'Suisse Regular';
+    span {
+      font-weight: bold;
+    }
+  }
+}

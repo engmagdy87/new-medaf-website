@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect, Suspense } from 'react';
 import whatIsTheSectionAppearInViewport from './helpers/DetectSectionInViewportHelper';
+import isDeviceSmart from './helpers/DetectIsDeviceSmart';
 import './assets/styles/app.scss';
 
 const SplashScreen = React.lazy(() =>
@@ -11,8 +12,11 @@ const About = React.lazy(() => import('./views/containers/About'));
 const Approach = React.lazy(() => import('./views/containers/Approach'));
 const Team = React.lazy(() => import('./views/containers/Team'));
 const Business = React.lazy(() => import('./views/containers/Business'));
-const News = React.lazy(() => import('./views/containers/News'));
+// const News = React.lazy(() => import('./views/containers/News'));
 const Contact = React.lazy(() => import('./views/containers/Contact'));
+const UnderConstruction = React.lazy(() =>
+  import('./views/containers/UnderConstruction')
+);
 
 function App() {
   const step = 20;
@@ -40,6 +44,7 @@ function App() {
   };
 
   const renderContent = () => {
+    if (isDeviceSmart()) return <UnderConstruction />;
     if (isLoading)
       return (
         <SplashScreen

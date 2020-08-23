@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
-import MedafLogo from '../../../assets/images/medaf-icon-white.png';
+import React, { Fragment } from "react";
+import isDeviceSmart from "../../../helpers/DetectIsDeviceSmart";
+import MedafLogo from "../../../assets/images/medaf-icon-white.png";
 
 export default function CardDetails({ card }) {
   const renderContent = () => {
@@ -22,7 +22,9 @@ export default function CardDetails({ card }) {
           <div>{card.completeTitle}</div>
           <div className="business-card-wrapper__content__section__details">
             <div>{card.description}</div>
-            <a href={card.website.url}>{card.website.text}</a>
+            <a href={card.website.url} target="__blank">
+              {card.website.text}
+            </a>
           </div>
         </div>
       </div>

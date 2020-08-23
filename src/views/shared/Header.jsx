@@ -1,51 +1,51 @@
-import React from 'react';
-import logoTypeface from '../../assets/images/medaf-typeface-red.png';
-import LinkedinIcon from '../../assets/images/Linkedin.jpg';
-import '../../assets/styles/shared/header.scss';
+import React from "react";
+import logoTypeface from "../../assets/images/medaf-typeface-red.png";
+import LinkedinIcon from "../../assets/images/Linkedin.jpg";
+import "../../assets/styles/shared/header.scss";
 
 export default function Header({ activeItem }) {
   let myNav;
   const openNav = () => {
-    myNav.style.height = '100%';
+    myNav.style.height = "100%";
   };
 
   const closeNav = () => {
-    myNav.style.height = '0%';
+    myNav.style.height = "0%";
   };
   const renderDesktopHeader = () => (
     <nav className="header-wrapper--desktop">
       <ul className="header-wrapper__navLinks">
         <li
           className={
-            activeItem === 'home' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === "home" ? "header-wrapper__navLinks--active" : ""
           }
         >
           <a href="#home">Home</a>
         </li>
         <li
           className={
-            activeItem === 'about' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === "about" ? "header-wrapper__navLinks--active" : ""
           }
         >
           <a href="#about">Who We Are</a>
         </li>
         <li
           className={
-            activeItem === 'approach' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === "approach" ? "header-wrapper__navLinks--active" : ""
           }
         >
           <a href="#approach">Our Approach</a>
         </li>
         <li
           className={
-            activeItem === 'team' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === "team" ? "header-wrapper__navLinks--active" : ""
           }
         >
           <a href="#team">Our People</a>
         </li>
         <li
           className={
-            activeItem === 'business' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === "business" ? "header-wrapper__navLinks--active" : ""
           }
         >
           <a href="#business">Our Business</a>
@@ -59,13 +59,16 @@ export default function Header({ activeItem }) {
         </li> */}
         <li
           className={
-            activeItem === 'contact' ? 'header-wrapper__navLinks--active' : ''
+            activeItem === "contact" ? "header-wrapper__navLinks--active" : ""
           }
         >
           <a href="#contact">Contact Us</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com" target="__blank">
+          <a
+            href="https://www.linkedin.com/company/medaf-investment"
+            target="__blank"
+          >
             <img src={LinkedinIcon} alt="Linkedin" />
           </a>
         </li>
@@ -82,7 +85,7 @@ export default function Header({ activeItem }) {
         <div className="overlay-content">
           <li
             className={
-              activeItem === 'home' ? 'header-wrapper__navLinks--active' : ''
+              activeItem === "home" ? "header-wrapper__navLinks--active" : ""
             }
           >
             <a href="#home" onClick={closeNav}>
@@ -91,7 +94,7 @@ export default function Header({ activeItem }) {
           </li>
           <li
             className={
-              activeItem === 'about' ? 'header-wrapper__navLinks--active' : ''
+              activeItem === "about" ? "header-wrapper__navLinks--active" : ""
             }
           >
             <a href="#about" onClick={closeNav}>
@@ -100,9 +103,9 @@ export default function Header({ activeItem }) {
           </li>
           <li
             className={
-              activeItem === 'approach'
-                ? 'header-wrapper__navLinks--active'
-                : ''
+              activeItem === "approach"
+                ? "header-wrapper__navLinks--active"
+                : ""
             }
           >
             <a href="#approach" onClick={closeNav}>
@@ -111,7 +114,7 @@ export default function Header({ activeItem }) {
           </li>
           <li
             className={
-              activeItem === 'team' ? 'header-wrapper__navLinks--active' : ''
+              activeItem === "team" ? "header-wrapper__navLinks--active" : ""
             }
           >
             <a href="#team" onClick={closeNav}>
@@ -120,9 +123,9 @@ export default function Header({ activeItem }) {
           </li>
           <li
             className={
-              activeItem === 'business'
-                ? 'header-wrapper__navLinks--active'
-                : ''
+              activeItem === "business"
+                ? "header-wrapper__navLinks--active"
+                : ""
             }
           >
             <a href="#business" onClick={closeNav}>
@@ -140,7 +143,7 @@ export default function Header({ activeItem }) {
           </li> */}
           <li
             className={
-              activeItem === 'contact' ? 'header-wrapper__navLinks--active' : ''
+              activeItem === "contact" ? "header-wrapper__navLinks--active" : ""
             }
           >
             <a href="#contact" onClick={closeNav}>
@@ -148,7 +151,10 @@ export default function Header({ activeItem }) {
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com" target="__blank">
+            <a
+              href="https://www.linkedin.com/company/medaf-investment"
+              target="__blank"
+            >
               <img src={LinkedinIcon} alt="Linkedin" />
             </a>
           </li>

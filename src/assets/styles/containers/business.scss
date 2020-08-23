@@ -8,4 +8,9 @@
   @include is-mobile {
     padding-top: $header-height-mobile;
   }
+  &__card {
+    @include is-mobile {
+      padding-top: 70px;
+    }
+  }
 }

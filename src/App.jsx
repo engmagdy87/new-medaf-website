@@ -44,7 +44,7 @@ function App() {
   };
 
   const renderContent = () => {
-    if (isDeviceSmart()) return <UnderConstruction />;
+    // if (isDeviceSmart()) return <UnderConstruction />;
     if (isLoading)
       return (
         <SplashScreen

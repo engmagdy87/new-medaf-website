@@ -97,7 +97,7 @@
 .hamburger-menu {
   font-size: 30px;
   cursor: pointer;
-  color: white !important;
+  color: $primary !important;
   position: absolute;
   top: calc(#{$header-height} / 2.5);
   right: 24px;

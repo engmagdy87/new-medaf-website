@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: $footer-height;
+  @include is-mobile {
+    margin-bottom: 0;
+    height: calc(100vh - #{$header-height-mobile});
+  }
   &__text {
     h1 {
       padding: 15% 20% 0 20%;
@@ -17,10 +21,11 @@
       text-align: center;
       font-family: 'Suisse Regular';
       @include is-mobile {
-        margin-bottom: 30px;
+        padding: 10% 10% 0% 10% !important;
+        margin-bottom: 0;
         line-height: 35px;
-        font-size: 1.4rem;
-        width: 80%;
+        font-size: 1.3rem !important;
+        width: 90% !important;
         text-align: left;
       }
       @media (max-height: 680px) {
@@ -48,6 +53,9 @@
     &:focus {
       color: white;
     }
+    @include is-mobile {
+      font-size: 0.8rem;
+    }
   }
   &__arrow {
     height: 60px;
@@ -57,12 +65,13 @@
       margin: 0 auto 20px auto;
       height: 60px;
       transform: rotate(90deg);
-    }
-    @include is-mobile {
-      display: none !important;
+      @include is-mobile {
+        margin-top: 20px;
+        height: 30px;
+      }
     }
     @include is-tablet {
-      display: none !important;
+      // display: none !important;
     }
   }
   &__modal {
@@ -190,9 +199,15 @@
     height: 100vh;
     padding-top: $header-height;
     position: relative;
+    @include is-mobile {
+      padding-top: 60px;
+    }
     &__Img {
       width: 100%;
       height: 100%;
+      @include is-mobile {
+        height: 200vh;
+      }
     }
     &__members {
       position: absolute;
@@ -204,6 +219,11 @@
         rgba(0, 0, 0, 0) 100%
       );
       height: 100%;
+      @include is-mobile {
+        display: block;
+        top: 80px;
+        height: 200vh;
+      }
       &__arrow {
         position: absolute;
         display: block;
@@ -249,24 +269,67 @@
         padding: 2% 4% 0 4%;
         height: 70vh;
       }
+      @include is-mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
+        height: 100vh;
+      }
       &__first-section {
         width: 40%;
         margin-right: 10%;
+        @include is-mobile {
+          width: 100%;
+          display: flex;
+        }
         img {
           width: 100%;
           @media (max-height: 680px) and (min-width: 1200px) {
             width: 80%;
             margin: 0 15%;
           }
+          @include is-mobile {
+            margin: auto;
+            width: 70%;
+          }
         }
         h3 {
           font-family: 'Jar Binks Regular';
           font-size: 3rem;
           text-align: center;
+          @include is-mobile {
+            font-size: 2rem;
+          }
+        }
+        &--image {
+          width: 50%;
+          h3 {
+            font-family: 'Jar Binks Regular';
+            font-size: 2rem;
+            text-align: center;
+          }
+        }
+        &--content {
+          width: 50%;
+          h1 {
+            font-family: 'Gothic Medium';
+            text-transform: uppercase;
+            margin-top: -4px;
+            font-size: 3rem;
+          }
+          h2 {
+            font-family: 'Gothic Regular';
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            width: 100%;
+          }
         }
       }
       &__second-section {
         width: 60%;
+        @include is-mobile {
+          width: 100%;
+        }
         h1 {
           font-family: 'Gothic Medium';
           text-transform: uppercase;
@@ -275,16 +338,38 @@
           @media (max-height: 680px) and (min-width: 1200px) {
             margin-bottom: 0px;
           }
+          @include is-mobile {
+            font-size: 1.5rem;
+          }
         }
         h2 {
           font-family: 'Gothic Regular';
           text-transform: uppercase;
           font-size: 2.5rem;
           width: 95%;
+          @include is-mobile {
+            font-size: 1.3rem;
+            width: 100%;
+          }
         }
         div {
+          @include is-mobile {
+            height: 50vh;
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+              width: 5px !important;
+            }
+            &::-webkit-scrollbar-thumb {
+              background-color: $primary !important;
+              border-radius: 20px !important;
+            }
+            &::-webkit-scrollbar {
+              background-color: rgba($color: #fff, $alpha: 0.8) !important;
+              border-radius: 20px !important;
+            }
+          }
           @media (max-height: 680px) and (min-width: 1200px) {
-            height: 50%;
+            height: 50vh;
             overflow-y: auto;
             &::-webkit-scrollbar {
               width: 5px !important;
@@ -301,6 +386,9 @@
           p {
             font-family: 'Suisse Regular';
             font-size: 1rem;
+            @include is-mobile {
+              font-size: 0.8rem;
+            }
           }
         }
       }

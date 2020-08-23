@@ -12,10 +12,7 @@ const MobileImage5 = require("../../assets/images/loading/mobile/medaf-loading-5
 export default [
   {
     "alt": "medaf loading 1",
-    "text": ["Sustaining Balance"
-      , "Transforming Mindsets"
-      , "Optimizing Potential"
-      , "Leading Trends"],
+    "text": ["", "", "", ""],
     "image": {
       desktop: DesktopImage1,
       mobile: MobileImage1

@@ -10,6 +10,9 @@
   height: calc(50vh - #{$header-height}/ 2);
   &__content {
     padding: 80px;
+    @include is-mobile {
+      padding: 20px;
+    }
     @media (max-height: 680px) and (min-width: 1200px) {
       padding: 30px 80px;
     }

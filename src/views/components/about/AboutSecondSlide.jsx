@@ -10,7 +10,7 @@ export default function AboutSlide({ firstSection, secondSection }) {
     ? secondSection.image.mobile
     : secondSection.image.desktop;
   return (
-    <div className="about-slide-wrapper">
+    <div className="about-slide-wrapper about-slide-wrapper--long-slide">
       <div
         className="about-slide-wrapper__section"
         style={{

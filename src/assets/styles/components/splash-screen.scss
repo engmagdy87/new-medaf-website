@@ -9,7 +9,7 @@
   @include is-mobile {
     padding-top: 50px;
   }
-  &__test {
+  &__container {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -17,7 +17,6 @@
   &__text {
     position: relative;
     display: inline-block;
-    height: 400px;
     width: 18%;
     @include is-mobile {
       height: 45vh;
@@ -46,9 +45,14 @@
     }
     &--show {
       visibility: visible;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &--hide {
       visibility: hidden;
+      height: 100px;
     }
     &--left {
       text-align: left;
@@ -67,6 +71,11 @@
     @media (max-height: 680px) and (min-width: 1200px) {
       margin: 10px auto;
     }
+    @include is-mobile {
+      margin: 25px auto;
+      padding: 2%;
+      width: 200px;
+    }
   }
   &__image {
     display: inline-block;
@@ -74,19 +83,25 @@
     max-width: 400px !important;
     height: 400px !important;
     @include is-mobile {
-      width: 90%;
-      height: 45vh;
+      // height: 200px !important;
+      width: 250px !important;
+      height: 250px !important;
+      // max-width: 300px !important;
       margin-top: 25px;
     }
     @media (max-height: 680px) and (min-width: 1200px) {
       width: 30% !important;
-      max-width: 250px !important;
+      // max-width: 250px !important;
       height: 250px !important;
     }
     img {
       height: 400px !important;
-      width: 100% !important;
+      width: 400px !important;
       margin: 0 0 25px 0 !important;
+      @include is-mobile {
+        width: 250px !important;
+        height: 250px !important;
+      }
     }
   }
   > p {
@@ -96,8 +111,8 @@
     text-transform: uppercase;
     font-family: 'Gothic Regular';
     @include is-mobile {
-      padding-top: 20%;
-      font-size: 1.1rem;
+      padding-top: 15%;
+      font-size: 1rem;
       letter-spacing: 10px;
     }
   }

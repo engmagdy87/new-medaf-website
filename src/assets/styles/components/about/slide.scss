@@ -6,10 +6,15 @@
   display: flex;
   position: relative;
   height: calc(100vh - #{$header-height});
+  &--long-slide {
+    @include is-mobile {
+      height: calc(200vh - #{$header-height}) !important;
+    }
+  }
   @include is-mobile {
     position: relative;
     display: block;
-    height: calc(100vh - #{$header-height-mobile} - #{$footer-height-mobile});
+    height: calc(100vh - #{$header-height-mobile});
   }
   @include is-tablet {
     width: 100%;
@@ -23,6 +28,7 @@
     width: 50%;
     @include is-mobile {
       width: 100%;
+      height: calc(100vh - #{$header-height-mobile});
     }
     @include is-tablet {
       width: 100%;
@@ -40,9 +46,9 @@
     @include is-mobile {
       position: absolute;
       top: 0;
-      width: 92%;
+      width: 100%;
       height: 100%;
-      background-color: rgba($color: #000, $alpha: 0.55);
+      background-color: rgba($color: #fff, $alpha: 0.55);
     }
     @include is-tablet {
       position: absolute;
@@ -64,6 +70,8 @@
       margin-top: -4px;
       @include is-mobile {
         font-size: 1.8rem;
+        margin-top: 5px;
+        margin-bottom: 20px;
       }
     }
     &__details {
@@ -75,8 +83,8 @@
         overflow-y: auto;
       }
       @include is-mobile {
-        margin-top: 20%;
-        width: 84%;
+        margin-top: 5%;
+        width: 90%;
       }
       @include is-tablet {
         padding-top: 20%;
@@ -99,30 +107,51 @@
         font-size: 1.2rem;
         font-family: 'Suisse Light';
         @include is-mobile {
-          font-size: 1rem;
           text-align: left;
         }
         &:nth-child(1) {
           line-height: 25px;
+
+          @include is-mobile {
+            font-size: 0.8rem;
+            line-height: 22px;
+            margin-bottom: 0px;
+          }
         }
         &:nth-child(2) {
           color: red;
           font-family: 'Suisse Regular';
           font-style: italic;
           margin-bottom: 20px;
+          @include is-mobile {
+            font-size: 0.8rem;
+            line-height: 22px;
+          }
         }
         &:nth-child(3),
         &:nth-child(4) {
           line-height: 0;
           font-family: 'Gothic Regular';
           text-transform: uppercase;
+          @include is-mobile {
+            font-size: 0.8rem;
+            margin: 5px;
+          }
         }
         &:nth-child(5) {
           font-size: 3rem;
           font-family: 'Jar Binks Regular';
+          @include is-mobile {
+            margin: 0;
+            font-size: 1rem;
+          }
         }
         &:nth-child(6) {
           font-family: 'Suisse Regular';
+          @include is-mobile {
+            margin: 0;
+            font-size: 0.9rem;
+          }
           a {
             color: black;
           }
@@ -145,12 +174,22 @@
     background-size: cover;
     margin-top: 10px;
     padding: 8%;
+    @include is-mobile {
+      width: 100%;
+      height: 100vh;
+      margin-top: 0px;
+    }
     @media (max-height: 680px) and (min-width: 1200px) {
       padding: 4% 6%;
     }
     h1 {
       margin-bottom: 40px;
       font-family: 'Gothic Medium';
+      @include is-mobile {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
       @media (max-height: 680px) and (min-width: 1200px) {
         margin-bottom: 20px;
       }
@@ -160,6 +199,11 @@
       font-family: 'Suisse Light';
       width: 50%;
       line-height: 30px;
+      @include is-mobile {
+        font-size: 1.3rem;
+        width: 80%;
+        line-height: 30px;
+      }
       @media (max-height: 680px) and (min-width: 1200px) {
         font-size: 1.5rem;
         width: 60%;
@@ -174,6 +218,10 @@
         font-size: 1rem;
         margin-bottom: 0;
       }
+      @include is-mobile {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
     }
     &__second-content-details {
       width: 70%;
@@ -184,6 +232,11 @@
         width: 90%;
         font-size: 0.9rem;
         margin-bottom: 10px;
+      }
+      @include is-mobile {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        width: 100%;
       }
     }
   }

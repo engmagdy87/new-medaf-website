@@ -37,7 +37,7 @@ export default function SplashScreen({ value, step, totalTime }) {
   return (
     <div className="splash-screen-wrapper">
       <Img src={logo} alt={'medaf logo'} />
-      <div className="splash-screen-wrapper__test">
+      <div className="splash-screen-wrapper__container">
         <div
           className={`splash-screen-wrapper__text ${
             currentSlideIndex === 0

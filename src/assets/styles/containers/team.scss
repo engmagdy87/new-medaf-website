@@ -7,6 +7,12 @@
   position: relative;
   @include is-mobile {
     padding-top: $header-height-mobile;
-    height: max-content;
+    height: 500vh;
+  }
+  #team-member-1,
+  #team-member-2 {
+    @include is-mobile {
+      height: 200vh;
+    }
   }
 }

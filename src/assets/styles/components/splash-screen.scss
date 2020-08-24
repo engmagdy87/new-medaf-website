@@ -79,28 +79,24 @@
   }
   &__image {
     display: inline-block;
-    width: 30%;
-    max-width: 400px !important;
-    height: 400px !important;
+    width: 400px;
+    height: 400px;
     @include is-mobile {
-      // height: 200px !important;
-      width: 250px !important;
-      height: 250px !important;
-      // max-width: 300px !important;
+      width: 250px;
+      height: 250px;
       margin-top: 25px;
     }
     @media (max-height: 680px) and (min-width: 1200px) {
-      width: 30% !important;
-      // max-width: 250px !important;
-      height: 250px !important;
+      width: 250px;
+      height: 250px;
     }
     img {
-      height: 400px !important;
-      width: 400px !important;
-      margin: 0 0 25px 0 !important;
+      height: 400px;
+      width: 400px;
+      margin: 0 0 25px 0;
       @include is-mobile {
-        width: 250px !important;
-        height: 250px !important;
+        width: 250px;
+        height: 250px;
       }
     }
   }

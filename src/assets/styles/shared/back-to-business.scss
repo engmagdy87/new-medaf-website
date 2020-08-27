@@ -1,0 +1,24 @@
+@import '../color-palette.scss';
+@import '../mixins.scss';
+
+.back-to-business-wrapper {
+  display: none;
+  @include is-mobile {
+    position: fixed;
+    display: block;
+    bottom: 12px;
+    right: 12px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    background-color: white;
+    padding: 5px;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    &--show {
+      display: block;
+    }
+    &--hide {
+      display: none;
+    }
+  }
+}

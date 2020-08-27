@@ -1,34 +1,51 @@
 @import '../variables.scss';
 @import '../mixins.scss';
-
+@import '../color-palette.scss';
 .approach-wrapper {
   padding-top: $header-height;
-  height: 100vh;
+  height: fit-content;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  img {
-    position: absolute;
-    width: 20%;
-    transform: translate(
-      calc(50vw - 50%),
-      calc(50vh - 50% + #{$header-height/2})
-    );
-    z-index: 10;
-    @include is-mobile {
-      display: none;
-    }
+  &__title {
+    display: none;
   }
   @include is-mobile {
     padding-top: $header-height-mobile;
-    height: max-content;
+    margin-top: 120px;
+    &__title {
+      height: $page-title-height-mobile;
+      width: fit-content;
+      display: block;
+      color: $primary;
+      font-size: 2rem;
+      font-family: 'Gothic Medium';
+      margin: 0 auto;
+    }
+  }
 
-    grid-template-columns: repeat(1, 1fr);
+  .approach-wrapper__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    img {
+      position: absolute;
+      width: 20%;
+      transform: translate(
+        calc(50vw - 50%),
+        calc(50vh - 50% + #{$header-height/2})
+      );
+      z-index: 10;
+      @include is-mobile {
+        display: none;
+      }
+    }
+    @include is-mobile {
+      height: max-content;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
   }
 }

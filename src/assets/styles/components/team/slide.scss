@@ -10,7 +10,7 @@
   margin-bottom: $footer-height;
   @include is-mobile {
     margin-bottom: 0;
-    height: calc(100vh - #{$header-height-mobile});
+    height: fit-content;
   }
   &__text {
     h1 {
@@ -23,7 +23,7 @@
       @include is-mobile {
         padding: 10% 10% 0% 10% !important;
         margin-bottom: 0;
-        line-height: 35px;
+        line-height: 35px !important;
         font-size: 1.3rem !important;
         width: 90% !important;
         text-align: left;
@@ -55,6 +55,7 @@
     }
     @include is-mobile {
       font-size: 0.8rem;
+      padding-bottom: 10px !important;
     }
   }
   &__arrow {
@@ -66,7 +67,7 @@
       height: 60px;
       transform: rotate(90deg);
       @include is-mobile {
-        margin-top: 20px;
+        margin-top: 15px;
         height: 30px;
       }
     }

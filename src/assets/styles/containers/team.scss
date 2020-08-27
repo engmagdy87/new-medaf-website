@@ -1,3 +1,4 @@
+@import '../color-palette.scss';
 @import '../variables.scss';
 @import '../mixins.scss';
 
@@ -5,9 +6,23 @@
   padding-top: $header-height;
   height: fit-content;
   position: relative;
+  margin-top: 20px;
+  &__title {
+    display: none;
+  }
   @include is-mobile {
     padding-top: $header-height-mobile;
     height: 500vh;
+    margin-top: 0;
+    &__title {
+      height: $page-title-height-mobile;
+      width: fit-content;
+      display: block;
+      color: $primary;
+      font-size: 2rem;
+      font-family: 'Gothic Medium';
+      margin: 0 auto;
+    }
   }
   #team-member-1,
   #team-member-2 {

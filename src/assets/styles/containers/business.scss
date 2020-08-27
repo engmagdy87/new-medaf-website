@@ -1,12 +1,25 @@
 @import '../variables.scss';
+@import '../color-palette.scss';
 @import '../mixins.scss';
 
 .business-wrapper {
   padding-top: $header-height;
   height: fit-content;
   position: relative;
+  &__title {
+    display: none;
+  }
   @include is-mobile {
     padding-top: $header-height-mobile;
+    &__title {
+      height: $page-title-height-mobile;
+      width: fit-content;
+      display: block;
+      color: $primary;
+      font-size: 2rem;
+      font-family: 'Gothic Medium';
+      margin: 0 auto;
+    }
   }
   &__card {
     @include is-mobile {

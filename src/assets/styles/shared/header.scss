@@ -3,7 +3,7 @@
 @import '../mixins.scss';
 
 .header-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: white;

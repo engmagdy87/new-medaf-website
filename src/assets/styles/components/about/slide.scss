@@ -14,7 +14,9 @@
   @include is-mobile {
     position: relative;
     display: block;
-    height: calc(100vh - #{$header-height-mobile});
+    height: calc(
+      100vh - #{$header-height-mobile} - #{$page-title-height-mobile}
+    );
   }
   @include is-tablet {
     width: 100%;
@@ -72,7 +74,7 @@
         color: white;
         font-size: 1.8rem;
         margin-top: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
       }
     }
     &__details {
@@ -84,7 +86,7 @@
         overflow-y: auto;
       }
       @include is-mobile {
-        margin-top: 5%;
+        margin-top: 10px;
         width: 90%;
       }
       @include is-tablet {

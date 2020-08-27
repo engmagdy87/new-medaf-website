@@ -7,6 +7,7 @@ const TeamMembers = React.lazy(() => import('../components/team/TeamMembers'));
 export default function Team() {
   return (
     <div id="team" className="wrapper team-wrapper">
+      <h1 className="team-wrapper__title">Our People</h1>
       <TeamHero />
       <div id="team-member-1">
         <TeamMembers members={TeamData.slice(0, 2)} targetId="team-member-2" />

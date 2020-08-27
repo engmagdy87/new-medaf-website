@@ -18,6 +18,7 @@ export default function Business() {
 
   return (
     <div id="business" className="wrapper business-wrapper">
+      <h1 className="business-wrapper__title">Our Business</h1>
       <BusinessCards />
       {BusinessData.map((slide, index) => (
         <div id={`${slide.id}`} key={index} className="business-wrapper__card">

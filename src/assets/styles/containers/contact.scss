@@ -1,3 +1,4 @@
+@import '../color-palette.scss';
 @import '../variables.scss';
 @import '../mixins.scss';
 
@@ -6,6 +7,12 @@
   padding-top: $header-height;
   height: 90%;
   width: 100%;
+  &__title {
+    font-size: 1rem;
+    padding-left: 5%;
+    font-family: 'Suisse Book';
+    color: black;
+  }
   @media (max-height: 680px) and (min-width: 1200px) {
     height: 85%;
   }
@@ -13,13 +20,17 @@
     padding-top: $header-height-mobile;
     height: max-content;
     display: block;
+    &__title {
+      height: $page-title-height-mobile;
+      width: fit-content;
+      display: block;
+      color: $primary;
+      font-size: 2rem;
+      font-family: 'Gothic Medium';
+      margin: 0 auto;
+    }
   }
-  h1 {
-    font-size: 1rem;
-    padding-left: 5%;
-    font-family: 'Suisse Book';
-    color: black;
-  }
+
   &__content {
     padding-left: 5%;
     margin-top: 50px;

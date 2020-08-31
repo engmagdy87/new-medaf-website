@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../assets/styles/containers/news.scss';
-import isDeviceSmart from '../../helpers/DetectIsDeviceSmart.js';
+import { isDeviceSmart } from '../../helpers/DetectIsDeviceSmart.js';
 const NewsCards = React.lazy(() => import('../components/news/NewsCards'));
 const GroupSlider = React.lazy(() => import('../components/news/GroupSlider'));
 

@@ -19,6 +19,9 @@
     // text-align: justify;
     font-weight: lighter;
     font-family: 'Suisse Regular';
+    @include is-tablet {
+      font-size: 2rem;
+    }
     @include is-mobile {
       // margin-bottom: 10px;
       line-height: 30px !important;
@@ -38,6 +41,9 @@
       padding-top: 6%;
       line-height: 35px;
       width: 55%;
+    }
+    @media (max-height: 800px) and (min-width: 1200px) {
+      font-size: 2rem;
     }
   }
   div {

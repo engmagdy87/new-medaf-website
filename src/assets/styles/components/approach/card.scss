@@ -8,8 +8,17 @@
   background-repeat: no-repeat;
   background-size: 150%;
   height: calc(50vh - #{$header-height}/ 2);
+  @include is-tablet {
+    background-size: cover;
+  }
+  @media (height: 1366px) and (width: 1024px) {
+    background-size: cover;
+  }
   &__content {
     padding: 80px;
+    @include is-tablet {
+      padding: 60px;
+    }
     @include is-mobile {
       padding: 20px;
     }
@@ -31,6 +40,9 @@
         font-size: 1.5rem;
         margin: 15px 0 !important;
       }
+      @include is-tablet {
+        font-size: 2rem;
+      }
       @media (max-height: 680px) and (min-width: 1200px) {
         margin-bottom: 10px !important;
       }
@@ -42,6 +54,10 @@
       @include is-mobile {
         height: 32%;
         font-size: 1rem;
+      }
+      @include is-tablet {
+        width: 90%;
+        font-size: 1.2rem;
       }
       @media (max-height: 680px) and (min-width: 1200px) {
         font-size: 1rem;

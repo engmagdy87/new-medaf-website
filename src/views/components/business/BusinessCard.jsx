@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../../assets/styles/components/business/card.scss';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 
 export default function BusinessSlide({ slide }) {
   const imageSrc = isDeviceSmart() ? slide.image.mobile : slide.image.desktop;

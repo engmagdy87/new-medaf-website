@@ -7,6 +7,9 @@
   position: relative;
   height: calc(100vh - #{$header-height});
   &--long-slide {
+    @include is-tablet {
+      height: calc(100vh - #{$header-height});
+    }
     @include is-mobile {
       height: calc(200vh - #{$header-height}) !important;
     }
@@ -21,8 +24,8 @@
   @include is-tablet {
     width: 100%;
     position: relative;
-    display: block;
-    height: calc(100vh - #{$header-height-mobile} - #{$footer-height-mobile});
+    display: flex;
+    height: calc(100vh - #{$header-height});
   }
 
   &__hq-image {
@@ -34,12 +37,16 @@
     }
     @include is-tablet {
       width: 100%;
+      height: calc(100vh - #{$header-height});
     }
   }
   &__logo {
     position: absolute;
     bottom: 0;
     width: 15%;
+    @include is-tablet {
+      left: 0;
+    }
   }
   &__content {
     width: 40%;
@@ -57,10 +64,14 @@
       top: 0;
       width: 100%;
       height: 100%;
-      padding-left: 0;
+      padding-top: 8%;
+      padding-left: 8%;
       background-color: rgba($color: #000, $alpha: 0.55);
     }
     @media (max-height: 680px) and (min-width: 1200px) {
+      width: 45%;
+    }
+    @media (max-height: 800px) and (min-width: 1200px) {
       width: 45%;
     }
     h1 {
@@ -76,6 +87,12 @@
         margin-top: 5px;
         margin-bottom: 0px;
       }
+      @include is-tablet {
+        color: white;
+      }
+      @media (max-height: 800px) and (min-width: 1200px) {
+        margin-bottom: 10px;
+      }
     }
     &__details {
       width: 100%;
@@ -90,7 +107,7 @@
         width: 90%;
       }
       @include is-tablet {
-        padding-top: 20%;
+        padding-top: 10%;
         width: 100%;
       }
       &::-webkit-scrollbar {
@@ -113,13 +130,19 @@
           text-align: left;
           color: white;
         }
+        @include is-tablet {
+          color: white;
+        }
         &:nth-child(1) {
           line-height: 25px;
-
           @include is-mobile {
             font-size: 0.8rem;
             line-height: 22px;
             margin-bottom: 0px;
+          }
+          @media (max-height: 800px) and (min-width: 1200px) {
+            font-size: 1rem;
+            padding-bottom: 0;
           }
         }
         &:nth-child(2) {
@@ -130,6 +153,9 @@
           @include is-mobile {
             font-size: 0.8rem;
             line-height: 22px;
+          }
+          @media (max-height: 800px) and (min-width: 1200px) {
+            font-size: 1rem;
           }
         }
         &:nth-child(3),
@@ -149,6 +175,10 @@
             margin: 0;
             font-size: 1rem;
           }
+          @media (max-height: 800px) and (min-width: 1200px) {
+            font-size: 1.7rem;
+            padding-bottom: 0;
+          }
         }
         &:nth-child(6) {
           font-family: 'Suisse Regular';
@@ -158,6 +188,12 @@
           }
           a {
             color: black;
+            @include is-tablet {
+              color: white;
+            }
+            @media (max-height: 800px) and (min-width: 1200px) {
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -203,6 +239,16 @@
       font-family: 'Suisse Light';
       width: 50%;
       line-height: 30px;
+      @media (height: 1366px) and (width: 1024px) {
+        font-size: 2rem;
+        width: 85%;
+        line-height: 40px;
+      }
+      @include is-tablet {
+        font-size: 1.8rem;
+        width: 85%;
+        line-height: 40px;
+      }
       @include is-mobile {
         font-size: 1.3rem;
         width: 80%;
@@ -222,6 +268,7 @@
         font-size: 1rem;
         margin-bottom: 0;
       }
+
       @include is-mobile {
         font-size: 1rem;
         margin-bottom: 15px;
@@ -236,6 +283,15 @@
         width: 90%;
         font-size: 0.9rem;
         margin-bottom: 10px;
+      }
+      @media (height: 1366px) and (width: 1024px) {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+      @include is-tablet {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        width: 100%;
       }
       @include is-mobile {
         font-size: 0.9rem;

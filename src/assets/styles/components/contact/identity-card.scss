@@ -54,6 +54,12 @@
       @media (max-height: 680px) and (min-width: 1200px) {
         width: 100%;
       }
+      @include is-tablet {
+        width: 100%;
+      }
+      @media (height: 1366px) and (width: 1024px) {
+        width: 100%;
+      }
       p,
       span {
         color: rgba($color: #000, $alpha: 0.8);
@@ -62,6 +68,9 @@
         margin-bottom: 0;
         @media (max-height: 680px) and (min-width: 1200px) {
           font-size: 0.6rem;
+        }
+        @media (height: 1366px) and (width: 1024px) {
+          font-size: 1rem;
         }
       }
     }

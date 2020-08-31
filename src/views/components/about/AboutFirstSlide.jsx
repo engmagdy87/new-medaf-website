@@ -1,5 +1,5 @@
 import React from 'react';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 import MedafLogo from '../../../assets/images/medaf-icon-white.png';
 import '../../../assets/styles/components/about/slide.scss';
 

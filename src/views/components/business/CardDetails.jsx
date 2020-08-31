@@ -1,6 +1,6 @@
-import React, { Fragment } from "react";
-import isDeviceSmart from "../../../helpers/DetectIsDeviceSmart";
-import MedafLogo from "../../../assets/images/medaf-icon-white.png";
+import React, { Fragment } from 'react';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
+import MedafLogo from '../../../assets/images/medaf-icon-white.png';
 
 export default function CardDetails({ card }) {
   const renderContent = () => {

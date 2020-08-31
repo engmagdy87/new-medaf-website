@@ -1,6 +1,6 @@
 import React from 'react';
 import Arrow from '../../../assets/images/about/arrow.png';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 import DesktopTeamHeroImage from '../../../assets/images/team/desktop/hero.jpg';
 import MobileTeamHeroImage from '../../../assets/images/team/mobile/hero.jpg';
 import '../../../assets/styles/components/team/slide.scss';

@@ -1,5 +1,5 @@
 import React from 'react';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 import '../../../assets/styles/components/approach/card.scss';
 
 export default function ApproachCard({ card, cardId }) {

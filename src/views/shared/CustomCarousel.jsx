@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Carousel } from 'react-bootstrap';
-import isDeviceSmart from '../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../helpers/DetectIsDeviceSmart';
 
 export default function CustomCarousel({
   children,

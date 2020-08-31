@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../assets/styles/containers/business.scss';
-// import isDeviceSmart from '../../helpers/DetectIsDeviceSmart.js';
+// import {isDeviceSmart} from '../../helpers/DetectIsDeviceSmart.js';
 import CardDetails from '../components/business/CardDetails';
 import BusinessData from '../../assets/data/business.js';
 const BusinessCards = React.lazy(() =>

@@ -2,7 +2,7 @@ import React from 'react';
 import Img from '../shared/Img';
 import Footer from '../shared/Footer';
 import ContactData from '../../assets/data/contact';
-import isDeviceSmart from '../../helpers/DetectIsDeviceSmart.js';
+import { isDeviceSmart } from '../../helpers/DetectIsDeviceSmart.js';
 import DesktopMap from '../../assets/images/contact/desktop/medaf-contact-map.jpg';
 import MobileMap from '../../assets/images/contact/desktop/medaf-contact-map.jpg';
 import '../../assets/styles/containers/contact.scss';

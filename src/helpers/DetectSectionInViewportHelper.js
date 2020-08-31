@@ -1,5 +1,5 @@
 import { HEADER_HEIGHT, HEADER_HEIGHT_MOBILE } from "../constants/Header"
-import isDeviceSmart from "../helpers/DetectIsDeviceSmart"
+import { isDeviceSmart } from "../helpers/DetectIsDeviceSmart"
 
 const whatIsTheSectionAppearInViewport = () => {
     let fromTop = document.getElementById("app").scrollTop;

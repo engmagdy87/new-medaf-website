@@ -1,5 +1,5 @@
 import React from 'react';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 import '../../../assets/styles/components/about/slide.scss';
 
 export default function AboutSlide({ firstSection, secondSection }) {

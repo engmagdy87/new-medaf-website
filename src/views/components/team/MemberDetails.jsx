@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { useEffect } from 'react';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 const Img = React.lazy(() => import('../../shared/Img'));
 
 export default function MemberDetails({ member, showModal, setShowModal }) {

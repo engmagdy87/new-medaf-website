@@ -1,7 +1,7 @@
 import React from 'react';
 import BoardMemberCard from './BoardMemberCard';
 import Arrow from '../../../assets/images/team/arrow.png';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 import DesktopTeamMemberImage from '../../../assets/images/team/desktop/team-bg.jpg';
 import MobileTeamMemberImage from '../../../assets/images/team/mobile/team-bg.jpg';
 import '../../../assets/styles/components/team/slide.scss';

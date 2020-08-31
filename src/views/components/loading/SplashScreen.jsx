@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CrossfadeImage from 'react-crossfade-image';
 import Progress from './Progress';
-import isDeviceSmart from '../../../helpers/DetectIsDeviceSmart';
+import { isDeviceSmart } from '../../../helpers/DetectIsDeviceSmart';
 import logo from '../../../assets/images/medaf-typeface-white.png';
 import '../../../assets/styles/components/splash-screen.scss';
 import SplashScreenData from '../../../assets/data/splachscreen.js';

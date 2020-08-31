@@ -13,6 +13,9 @@
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   div:nth-child(1) {
+    @include is-tablet {
+      height: calc(50vh - 90px);
+    }
     @include is-mobile {
       height: calc(90vh - 90px);
     }
@@ -40,6 +43,13 @@
   }
   div[role='button']:nth-child(8) {
     grid-area: 2 / 4 / 3 / 4;
+  }
+  @include is-tablet {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(1, 1fr) !important;
+    grid-column-gap: 0 !important;
+    grid-row-gap: 0 !important;
+    height: max-content;
   }
   @include is-mobile {
     grid-template-columns: repeat(1, 1fr) !important;

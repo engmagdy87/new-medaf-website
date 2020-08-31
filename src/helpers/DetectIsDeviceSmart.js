@@ -10,4 +10,20 @@ const isDeviceSmart = () => {
     return phone.matches || landscapePhone.matches || tablet.matches
 }
 
-export default isDeviceSmart
+const isIPad = () => {
+    const ipad = window.matchMedia(
+        '(max-width:768px) and (max-height: 1024px)'
+    );
+
+    return ipad.matches
+}
+
+const isIPadPro = () => {
+    const ipadPro = window.matchMedia(
+        '(max-width:1024px) and (max-height: 1366px)'
+    );
+
+    return ipadPro.matches
+}
+
+export { isDeviceSmart, isIPad, isIPadPro }

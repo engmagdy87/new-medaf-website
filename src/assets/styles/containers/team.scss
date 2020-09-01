@@ -12,7 +12,7 @@
   }
   @include is-mobile {
     padding-top: $header-height-mobile;
-    height: 500vh;
+    height: 460vh;
     margin-top: 0;
     &__title {
       height: $page-title-height-mobile;
@@ -27,7 +27,7 @@
   #team-member-1,
   #team-member-2 {
     @include is-mobile {
-      height: 200vh;
+      height: 180vh;
     }
   }
 }

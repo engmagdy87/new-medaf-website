@@ -207,7 +207,7 @@
       width: 100%;
       height: 100%;
       @include is-mobile {
-        height: 200vh;
+        height: 180vh;
       }
     }
     &__members {
@@ -223,7 +223,7 @@
       @include is-mobile {
         display: block;
         top: 80px;
-        height: 200vh;
+        height: 180vh;
       }
       @include is-tablet {
         display: block;
@@ -291,7 +291,7 @@
         display: block;
         width: 100%;
         text-align: center;
-        height: 100vh;
+        height: 90vh;
       }
       &__first-section {
         width: 40%;

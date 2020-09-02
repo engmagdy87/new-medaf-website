@@ -33,7 +33,7 @@
       width: 20%;
       transform: translate(
         calc(50vw - 50%),
-        calc(50vh - 50% + #{$header-height/2})
+        calc(50vh - 50% - #{$header-height/2})
       );
       z-index: 10;
       @include is-tablet {
